@@ -1,8 +1,22 @@
+
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+
+/* Fixed navbar styles */
+header.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Add padding to the main content to prevent it from hiding under the fixed navbar */
+main.with-fixed-navbar {
+  padding-top: 78px; /* Adjust this value based on your navbar height */
 }
 
 .logo {
@@ -11,11 +25,40 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Kaggle specific colors */
+:root {
+  --kaggle-blue: #20BEFF; 
+  --kaggle-yellow: #FFBE29;
+}
+
+.bg-kaggle-blue {
+  background-color: var(--kaggle-blue);
+}
+
+.bg-kaggle-yellow {
+  background-color: var(--kaggle-yellow);
+}
+
+.text-kaggle-blue {
+  color: var(--kaggle-blue);
+}
+
+/* Transition effects for hover */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
 }
 
 @keyframes logo-spin {
