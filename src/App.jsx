@@ -1,14 +1,15 @@
-import './App.css'
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './routes';
+import { SidebarProvider } from './contexts/SidebarContext';
 
 function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold text-blue-600">
-        Tailwind is Active!
-      </h1>
-    </div>
+    <Router>
+      <SidebarProvider>
+        <AppRoutes />
+      </SidebarProvider>
+    </Router>
   );
 }
 
 export default App;
-

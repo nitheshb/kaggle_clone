@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Sidebar hover effect */
+button:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+button:active {
+  background-color: #e0e0e0; /* Slightly darker grey when clicked */
+}
+
+button svg {
+  transition: color 0.3s ease; /* Smooth color transition for icon */
+}
+
+button:hover svg {
+  color: #20BEFF; /* Change icon color on hover */
+}
+
