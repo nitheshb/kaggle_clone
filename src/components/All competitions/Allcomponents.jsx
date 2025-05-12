@@ -8,7 +8,7 @@ export default function CompetitionsPage() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [filterActive, setFilterActive] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
+
 
   // Sort options
   const sortOptions = ['Hotness', 'Recently Launched', 'Closing Soon', 'Recently Completed', 'Rewards', 'Total Teams'];
