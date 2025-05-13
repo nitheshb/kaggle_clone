@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, ChevronDown, Grid, LayoutGrid, MoreHorizontal, X, Bookmark, PlusCircle } from 'lucide-react';
 
 export default function CompetitionsPage() {
@@ -57,7 +58,7 @@ export default function CompetitionsPage() {
     },
     {
       id: 3,
-      title: "Image Matching Challenge 2025",
+      title: <Link to="/image-matching-challenge-2025" className="[hover: cursor-pointer">Image Matching Challenge</Link>,
       series: null,
       description: "Reconstruct 3D scenes from messy image collections.",
       type: "Research",
