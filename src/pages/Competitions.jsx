@@ -51,7 +51,7 @@ const Competitions = () => {
             <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <span className="font-medium">All Competitions</span>
+            <span className="font-medium"> <Link to="/all-competetions" className="text-blue-500 hover:underline hover: cursor-pointer">All Competitions</Link></span>
           </div>
           <p className="text-sm text-gray-600">Everything, past & present</p>
         </div>
