@@ -22,8 +22,8 @@ const Layout = ({ children }) => {
   }, [location]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
+    <div className="min-h-screen">
+      {/* <Navbar /> */}
       <Sidebar />
       <main className={`transition-all duration-300 ease-in-out pt-16 ${isOpen ? 'md:ml-64' : 'ml-0 md:ml-16'}`}>
         <div className="px-4 py-6">
