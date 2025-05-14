@@ -11,6 +11,8 @@ import Learn from '../pages/Learn/Learn';
 import NotFound from '../pages/NotFound';
 import ImageMatching from '../pages/ImageMatching';
 import AllCompetetions from '../pages/AllCompetetions';
+import PredictCaloriesExpenditure from '../pages/PredictCalorieExpenditure';
+import YaleUNCCH from '../pages/YaleUNCCH';
 
 const AppRoutes = () => {
   return (
@@ -24,9 +26,8 @@ const AppRoutes = () => {
       <Route path="/courses" element={<Layout><Courses /></Layout>} />
       <Route path="/learn" element={<Layout><Learn /></Layout>} />
       <Route path="/all-competetions" element={<Layout><AllCompetetions /></Layout>} />
-      
-      
-
+      <Route path="/predict-calorie-expenditure" element={<Layout><PredictCaloriesExpenditure /></Layout>} />
+      <Route path="/yale-unc-ch-geophysical-waveform-inversion" element={<Layout><YaleUNCCH /></Layout>} />
       <Route path="/image-matching-challenge-2025" element={<Layout><ImageMatching /></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />
     </Routes>
