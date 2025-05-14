@@ -36,7 +36,7 @@ export default function CompetitionsPage() {
   const competitions = [
  {
       id: 1,
-      title: "Predict Calorie Expenditure",
+      title: <Link to="/predict-calorie-expenditure" className="[hover: cursor-pointer">Predict Calorie Expenditure</Link>,
       series: "Playground Series - Season 5, Episode 5",
       type: "Playground",
       teams: 1520,
@@ -47,7 +47,7 @@ export default function CompetitionsPage() {
     },
     {
       id: 2,
-      title: "Yale/UNC-CH - Geophysical Waveform Inversion",
+      title: <Link to="/yale-unc-ch-geophysical-waveform-inversion" className="[hover: cursor-pointer">Yale/UNC-CH - Geophysical Waveform Inversion</Link>,
       series: null,
       description: "Develop physics-guided machine learning models to solve full-waveform inversion problems",
       type: "Research",

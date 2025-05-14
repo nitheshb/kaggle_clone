@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 
 const Layout = ({ children }) => {
-  const { isOpen } = useSidebar();
+  const { isOpen, isExpanded } = useSidebar();
   const location = useLocation();
 
   useEffect(() => {
@@ -21,12 +21,21 @@ const Layout = ({ children }) => {
     document.title = pageTitle;
   }, [location]);
 
+  // Dynamically adjust the main content margin based on sidebar state
+  const mainContentMargin = isOpen 
+    ? isExpanded 
+      ? 'ml-0 md:ml-64' // Sidebar is open and expanded (full width - 16rem/64px)
+      : 'ml-0 md:ml-16' // Sidebar is open but collapsed (icon only - 4rem/16px)
+    : 'ml-0'; // Sidebar is closed
+
   return (
-    <div className="min-h-screen">
-      {/* <Navbar /> */}
+    <div className="">
+      <Navbar />
       <Sidebar />
-      <main className={`transition-all duration-300 ease-in-out pt-16 ${isOpen ? 'md:ml-64' : 'ml-0 md:ml-16'}`}>
-        <div className="px-4 py-6">
+      <main 
+        className={`transition-all duration-300 ease-in-out pt-16 ${mainContentMargin}`}
+      >
+        <div className="px-4 py-6 md:px-6">
           {children}
         </div>
       </main>
