@@ -10,7 +10,7 @@ const DatasetCard = ({ title, usability, size, description, icon }) => {
       <CardContent className="p-6">
         <div className="flex justify-between items-start">
           <h3 className="text-xl font-bold text-gray-800">{title}</h3>
-          {icon && <img src="\images\dataset-thumbnail.jpg"
+          {icon && <img src={icon}
           alt={title} className="w-12 h-12" />}
         </div>
         
@@ -32,28 +32,28 @@ const DatasetsSection = () => {
       usability: "10.0",
       size: "98 MB",
       description: "Bitcoin data at 1-min intervals from select exchanges, Jan 2012 to Present",
-      icon: "\images\dataset-thumbnail.jpg"
+      icon: "/images/dataset-thumbnail.jpg"
     },
     {
       title: "Fruits-360 dataset",
       usability: "8.8",
       size: "4 GB",
       description: "A dataset with 134605 images of 196 fruits, vegetables, nuts and seeds",
-      icon: "https://storage.googleapis.com/kaggle-datasets-images/7205/10675/d7897f0078e18c4917a6271697e9a83c/dataset-card.jpg"
+      icon: "/images/dataset-thumbnail (1).jpg"
     },
     {
       title: "International football results",
       usability: "10.0",
       size: "1 MB",
       description: "An up-to-date dataset of over 47,000 international football results",
-      icon: "https://storage.googleapis.com/kaggle-datasets-images/28809/35658/ac02badd635a4388825e2667c442c185/dataset-card.jpeg"
+      icon: "/images/dataset-thumbnail (2).jpg"
     },
     {
       title: "Formula 1 World Championship",
       usability: "10.0",
       size: "7 MB",
       description: "F1 race data from 1950 to 2024",
-      icon: "https://storage.googleapis.com/kaggle-datasets-images/160/330/3cc912e0bafeb3dc499b8f63c27d334e/dataset-card.jpg"
+      icon: "/images/dataset-thumbnail (2).jpg"
     }
   ];
 

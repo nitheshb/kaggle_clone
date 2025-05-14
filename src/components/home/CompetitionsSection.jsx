@@ -10,7 +10,7 @@ const CompetitionCard = ({ title, prize, type, description, logo }) => {
       <CardContent className="p-6">
         <div className="flex justify-between items-start">
           <h3 className="text-base font-bold text-gray-800">{title}</h3>
-          {logo && <img src="\images\thumb76_76.png" 
+          {logo && <img src= {logo}
           alt={title} className="w-8 h-8" />}
         </div>
         
@@ -31,28 +31,28 @@ const CompetitionsSection = () => {
       prize: 725000,
       type: "Featured Competition",
       description: "Create an AI capable of novel reasoning",
-      logo: "https://storage.googleapis.com/kaggle-competitions/kaggle/33257/logos/thumb76_76.png"
+      logo: "/images/kaggle_67357_logos_thumb76_76.png"
     },
     {
       title: "Stanford RNA 3D Folding",
       prize: 75000,
       type: "Featured Competition",
       description: "Solve RNA structure prediction, one of biology's remaining grand challenges",
-      logo: "https://storage.googleapis.com/kaggle-competitions/kaggle/32878/logos/thumb76_76.png"
+      logo: "/images/thumb76_76 (1).png"
     },
     {
       title: "BYU - Locating Bacterial Flagellar Motors",
       prize: 65000,
       type: "Research Competition",
       description: "Help locate flagellar motors in three-dimensional reconstructions of bacterial cells",
-      logo: "https://storage.googleapis.com/kaggle-competitions/kaggle/40378/logos/thumb76_76.png"
+      logo: "/images/thumb76_76.png"
     },
     {
       title: "BirdCLEF+ 2025",
       prize: 50000,
       type: "Research Competition",
       description: "Species identification from audio, focused on birds, amphibians, and insects",
-      logo: "\images\competition4.png"
+      logo: "/images/competition4.png"
     }
   ];
 

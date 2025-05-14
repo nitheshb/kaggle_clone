@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 
-const ModelCard = ({ title, organization, logo, description }) => {
+const ModelCard = ({ title, organization, logo, description}) => {
   return (
     <Card className="border border-gray-200 hover:shadow-md transition-shadow h-full">
       <CardContent className="p-6">
         <div className="flex justify-between items-start">
           <h3 className="text-base font-bold text-gray-800">{title}</h3>
           <img 
-            src="\images\modell.png" 
+            src = {logo}
             alt={organization} 
             className="w-8 h-8"
-            onError={(e) => { e.target.src = "https://storage.googleapis.com/kaggle-organizations/kaggle/thumbnail.png"; }}
+             onError={(e) => { e.target.src = "https://storage.googleapis.com/kaggle-organizations/kaggle/thumbnail.png"; }}
           />
         </div>
         
@@ -33,25 +33,25 @@ const ModelsSection = () => {
     {
       title: "Gemma",
       organization: "Google",
-      logo: "\images\modell.png",
+      logo: "/images/modell.png",
       description: "Gemma is a family of lightweight, open models built from the research and technology used to create the Gemini models."
     },
     {
       title: "Gemma",
       organization: "Keras",
-      logo: "\images\thumbnail.png_r=601",
+      logo: "/images/thumbnail.png_r=601",
       description: "Keras implementation of the Gemma model. This Keras 3 implementation works with TensorFlow, JAX, and PyTorch."
     },
     {
       title: "DeepSeek R1",
       organization: "DeepSeek",
-      logo: "\images\model3.png",
+      logo: "/images/model3.png",
       description: "We introduce our first-generation reasoning models, DeepSeek-R1-Zero (26B) and DeepSeek-R1-Full (21B)."
     },
     {
       title: "Llama 2",
       organization: "Meta",
-      logo: "\images\model4.png",
+      logo: "/images/model4.png",
       description: "Llama 2 is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 70 billion parameters."
     }
   ];

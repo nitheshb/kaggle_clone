@@ -41,27 +41,27 @@ const CoursesSection = () => {
       title: "Intro to Programming",
       duration: "5 hours",
       description: "Get started with Python, if you have no coding experience.",
-      icon: "https://storage.googleapis.com/kaggle-learn-images/605370/661477/5a07b3f59c2412afd25478fd209a7749/course-card.png"
+      icon: "/images/course1.svg"
     },
     {
       title: "Python",
       duration: "5 hours",
       description: "Learn the most important language for data science.",
-      icon: "https://storage.googleapis.com/kaggle-learn-images/194579/427509/5cc42c84d4c071ca1029d105c8138a32/course-card.png",
+      icon: "/images/course2.svg",
       progress: 40
     },
     {
       title: "Intro to Machine Learning",
       duration: "3 hours",
       description: "Learn the core ideas in machine learning, and build your first models.",
-      icon: "https://storage.googleapis.com/kaggle-learn-images/194580/427510/63f079c75ee0aaf45b5763cd7f07a850/course-card.png",
+      icon: "/images/course3.svg",
       progress: 60
     },
     {
       title: "Pandas",
       duration: "4 hours",
       description: "Solve short hands-on challenges to perfect your data manipulation skills.",
-      icon: "https://storage.googleapis.com/kaggle-learn-images/194577/427507/47cd4b4acef9c8d794f0f6ea1a1ac6b5/course-card.png"
+      icon: "/images/course4.svg"
     }
   ];
 

@@ -7,7 +7,7 @@ import Models from '../pages/Models';
 import Code from '../pages/Code';
 import Discussions from '../pages/Discussions';
 import Courses from '../pages/Courses';
-import Learn from '../pages/Learn';
+import Learn from '../pages/Learn/Learn';
 import NotFound from '../pages/NotFound';
 import ImageMatching from '../pages/ImageMatching';
 import AllCompetetions from '../pages/AllCompetetions';
@@ -24,6 +24,8 @@ const AppRoutes = () => {
       <Route path="/courses" element={<Layout><Courses /></Layout>} />
       <Route path="/learn" element={<Layout><Learn /></Layout>} />
       <Route path="/all-competetions" element={<Layout><AllCompetetions /></Layout>} />
+      
+      
 
       <Route path="/image-matching-challenge-2025" element={<Layout><ImageMatching /></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />

@@ -3,12 +3,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-const SolutionCard = ({ author, title, upvotes }) => {
+const SolutionCard = ({ author, title, upvotes, src }) => {
   return (
     <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow">
       <div className="flex items-center mb-4">
         <img 
-          src="\images\solutionwriteup.png"
+          src={src}
           alt={author} 
           className="w-12 h-12 rounded-full mr-3 border-2 border-orange-400"
           // onError={(e) => { e.target.src = "https://storage.googleapis.com/kaggle-images/default-user-icon.png"; }}
@@ -28,22 +28,26 @@ const SolutionWriteupsSection = () => {
     {
       author: "User1",
       title: "Quora Question Pairs",
-      upvotes: "339"
+      upvotes: "339",
+      src:"/images/solutionwriteup1.png"
     },
     {
       author: "User2",
       title: "Web Traffic Time Series Forecasting",
-      upvotes: "455"
+      upvotes: "455",
+      src:"/images/solutionwriteup2.png"
     },
     {
       author: "User3",
       title: "Porto Seguro's Safe Driver Prediction",
-      upvotes: "1092"
+      upvotes: "1092",
+      src:"/images/solutionwriteup3.png"
     },
     {
       author: "User4",
       title: "Mercari Price Suggestion Challenge",
-      upvotes: "246"
+      upvotes: "246",
+      src:"/images/solutionwriteup.png"
     }
   ];
 

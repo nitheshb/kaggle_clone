@@ -10,7 +10,7 @@ const KagglersSection = () => {
     return (
       <div key={i} className={`w-16 h-16 rounded-full border-2 ${randomColor} overflow-hidden`}>
         <img 
-          src={`https://www.kaggle.com/static/images/users/user${i + 1}.png`}
+          src="\images\kagglers3.png"
           alt="Kaggle user"
           className="w-full h-full object-cover"
           onError={(e) => { 
