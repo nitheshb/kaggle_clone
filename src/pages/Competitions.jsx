@@ -58,9 +58,7 @@ const Competitions = () => {
        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
   <div className="flex items-center mb-2">
     <Star className="w-5 h-5 mr-2 text-yellow-500" />
-    <Link to="/featured" className="font-medium text-blue-500 hover:underline cursor-pointer">
-      Featured
-    </Link>
+    <Link to="/Featured" className="text-blue-500 hover:underline hover: cursor-pointer">Featured</Link>
   </div>
   <p className="text-sm text-gray-600">Premier challenges with prizes</p>
 </div>

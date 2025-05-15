@@ -176,7 +176,7 @@ export default function FeaturedPage() {
     teams: 3559,
     timeRemaining: "5 months ago",
     prize: "$60,000",
-    image: "public/kaggle_53666_logos_thumb76_76.jpg"
+    image: "kaggle_53666_logos_thumb76_76.jpg"
   },
   {
     id: 16,
@@ -186,7 +186,7 @@ export default function FeaturedPage() {
     teams: 1446,
     timeRemaining: "5 months ago",
     prize: "$55,000",
-    image: "public/thumb76_76 (18).png"},
+    image: "thumb76_76 (18).png"},
     {
       id: 17,
       title: "ARC Prize 2025",
@@ -194,7 +194,7 @@ export default function FeaturedPage() {
       teams: 357,
       timeRemaining: "6 months to go",
       prize: "$725,000",
-      image: "public/kaggle_67357_logos_thumb76_76.png"},
+      image: "kaggle_67357_logos_thumb76_76.png"},
     {
       id: 18,
       title: "Stanford RNA 3D Folding",
@@ -202,7 +202,7 @@ export default function FeaturedPage() {
       teams: 1265,
       timeRemaining: "18 days to go",
       prize: "$75,000",
-      image: "public/thumb76_76 (5).png"},
+      image: "thumb76_76 (5).png"},
     {
       id: 19,
       title: "Drawing with LLMs",
@@ -210,7 +210,7 @@ export default function FeaturedPage() {
       teams: 1276,
       timeRemaining: "16 days to go",
       prize: "$50,000",
-      image: "public/thumb76_76 (6).png"},
+      image: "thumb76_76 (6).png"},
     {
       id: 20,
       title: "March Machine Learning Mania 2025",
@@ -218,7 +218,7 @@ export default function FeaturedPage() {
       teams: 1727,
       timeRemaining: "A month ago",
       prize: "$50,000",
-      image: "public/kaggle_46801_logos_thumb76_76.png"}
+      image: "kaggle_46801_logos_thumb76_76.png"}
   ];
 
   return (

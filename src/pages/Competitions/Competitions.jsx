@@ -197,7 +197,8 @@ const Competitions = () => {
       title: 'Featured',
       icon: <Star className="w-5 h-5" />,
       description: 'Premier challenges with prizes',
-      iconColor: 'text-gray-700'
+      iconColor: 'text-gray-700',
+      link: '/featured',
     },
     {
       id: 3,
