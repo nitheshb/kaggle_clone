@@ -19,7 +19,7 @@ import React, { useState, useLayoutEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from '../../components/layout/Sidebar.jsx';
 import { Search, BarChart2, Bookmark, List, Grid } from 'lucide-react';
-
+import CompetitionNavbarA from '../../components/layout/NavbarA.jsx';
 // Courses data
 const courses = [
   { title: 'Intro to Programming', description: 'Get started with Python, if you have no coding experience.', icon: '/images/intro-to-programming.svg', meta: '5 hours · 1 guided project', prereq: 'No prerequisites' },
@@ -72,21 +72,9 @@ export default function Learn() {
     <div className="flex h-screen overflow-hidden bg-white">
       <Sidebar />
       <div className="flex-1 flex flex-col">
+        <CompetitionNavbarA visible={true} />
         {/* Top bar */}
-        <nav className="sticky top-0 z-20 bg-white px-8 py-3 flex items-center justify-between shadow-sm">
-          <div className="relative flex-1">
-            <input
-              type="text"
-              placeholder="Search"
-              className="w-full pl-10 pr-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-          </div>
-          <div className="flex items-center gap-4">
-            <button onClick={() => navigate('/signin')} className="text-gray-700 hover:text-black">Sign In</button>
-            <button onClick={() => navigate('/register')} className="px-4 py-2 bg-black text-white rounded-full">Register</button>
-          </div>
-        </nav>
+        
 
         <div className="flex-1 overflow-auto pb-8">
           {/* Hero */}

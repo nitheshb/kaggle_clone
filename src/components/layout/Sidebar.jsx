@@ -1,20 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSidebar } from '../../contexts/SidebarContext';
-import {
-  Home,
-  Trophy,
-  Database,
-  Layers,
-  Code,
-  MessageSquare,
-  GraduationCap,
-  ChevronDown,
-  ChevronUp,
-  Plus,
-  Menu,
-  ClipboardList,
-} from 'lucide-react';
+import { Home, Trophy, Database, Layers, Code, MessageSquare, GraduationCap, ChevronDown, ChevronUp, Plus, Menu, ClipboardList } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -32,8 +19,8 @@ const Sidebar = () => {
 
   const sidebarWidthClass = isOpen
     ? isExpanded
-      ? 'w-64'
-      : 'w-16'
+      ? 'w-64'  // Expanded Sidebar Width
+      : 'w-16'  // Collapsed Sidebar Width
     : 'w-0';
 
   const mainNavItems = [
@@ -110,9 +97,9 @@ const Sidebar = () => {
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >
-                  {React.createElement(icon, { 
-                    className: "h-5 w-5 flex-shrink-0", 
-                    strokeWidth: 1.8 
+                  {React.createElement(icon, {
+                    className: 'h-5 w-5 flex-shrink-0',
+                    strokeWidth: 1.8,
                   })}
                   {isExpanded && <span className="ml-3">{label}</span>}
                 </Link>

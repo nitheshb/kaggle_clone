@@ -8,34 +8,32 @@ import Sidebar from './Sidebar';
 const Layout = ({ children }) => {
   const { isOpen, isExpanded } = useSidebar();
   const location = useLocation();
-
+  
+  // Set page title based on current route
   useEffect(() => {
     const pathSegments = location.pathname.split('/').filter(Boolean);
     let pageTitle = 'Kaggle: Your Machine Learning and Data Science Community';
-
+    
     if (pathSegments.length > 0) {
       const pageName = pathSegments[0];
       pageTitle = `Kaggle ${pageName.charAt(0).toUpperCase() + pageName.slice(1)}`;
     }
-
+    
     document.title = pageTitle;
   }, [location]);
 
-  // Dynamically adjust the main content margin based on sidebar state
-  const mainContentMargin = isOpen 
+  const mainContentClass = isOpen 
     ? isExpanded 
-      ? 'ml-0 md:ml-64' // Sidebar is open and expanded (full width - 16rem/64px)
-      : 'ml-0 md:ml-16' // Sidebar is open but collapsed (icon only - 4rem/16px)
-    : 'ml-0'; // Sidebar is closed
+      ? 'ml-0 md:ml-64' // Expanded sidebar
+      : 'ml-0 md:ml-16' // Collapsed sidebar
+    : 'ml-0'; // No sidebar
 
   return (
-    <div className="">
+    <div className="min-h-screen bg-white">
       <Navbar />
       <Sidebar />
-      <main 
-        className={`transition-all duration-300 ease-in-out pt-16 ${mainContentMargin}`}
-      >
-        <div className="px-4 py-6 md:px-6">
+      <main className={`transition-all duration-300 ease-in-out pt-16 ${mainContentClass}`}>
+        <div className="px-4 py-6">
           {children}
         </div>
       </main>
@@ -48,3 +46,4 @@ Layout.propTypes = {
 };
 
 export default Layout;
+

@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import Home from '../pages/Home';
-import Competitions from '../pages/Competitions';
+import Competitions from '../pages/Competitions/Competitions';
 import Datasets from '../pages/Datasets';
 import Models from '../pages/Models';
 import Code from '../pages/Code';
