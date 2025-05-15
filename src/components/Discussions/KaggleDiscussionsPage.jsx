@@ -1,11 +1,10 @@
 import React from 'react';
-import Header from '../components/Discussions/Header';
-import ForumCategories from '../components/Discussions/ForumCategories';
-import DiscussionList from '../components/Discussions/DiscussionList';
-import { forumCategories, discussionItems } from '../components/Discussions/KaggleData';
+import Header from './Header';
+import ForumCategories from './ForumCategories';
+import DiscussionList from './DiscussionList';
+import { forumCategories, discussionItems } from './KaggleData';
 
-// This is the main component for the Discussions page
-const Discussions = () => {
+const KaggleDiscussionsPage = () => {
   return (
     <div className="bg-white font-sans" style={{ minHeight: "150vh", width: "100%" }}>
       {/* Main Content */}
@@ -23,5 +22,4 @@ const Discussions = () => {
   );
 };
 
-// Make sure to add this default export
-export default Discussions;
+export default KaggleDiscussionsPage;
