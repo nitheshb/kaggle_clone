@@ -36,43 +36,189 @@ export default function FeaturedPage() {
   };
 
   // Competitions data matching the image
-  const competitions = [
+   const competitions = [
+  {
+    id: 1,
+    title: "Konwinski Prize",
+    description: "$1M for the AI that can close 90% of new GitHub issues",
+    type: "Code Competition",
+    teams: 617,
+    timeRemaining: "A month to go",
+    prize: "$1,225,000",
+    image: "public/thumb76_76 (10).png"},
+  {
+    id: 2,
+    title: "NeurIPS - Ariel Data Challenge 2024",
+    description: "Derive exoplanet signals from Ariel's optical instruments",
+    type: "Code Competition",
+    teams: 1151,
+    timeRemaining: "6 months ago",
+    prize: "$50,000",
+    image: "public/thumb76_76 (19).png",},
+  {
+    id: 3,
+    title: "ARC Prize 2024",
+    description: "Create an AI capable of solving reasoning tasks it has never seen before",
+    type: "Code Competition",
+    teams: 1427,
+    timeRemaining: "6 months ago",
+    prize: "$1,100,000",
+    image: "public/kaggle_67357_logos_thumb76_76.png"
+  },
+  {
+    id: 4,
+    title: "RSNA 2024 Lumbar Spine Degenerative Classification",
+    description: "Classify lumbar spine degenerative conditions",
+    type: "Code Competition",
+    teams: 1874,
+    timeRemaining: "7 months ago",
+    prize: "$50,000",
+    image: "public/kaggle_36363_logos_thumb76_76.png"}
+    ,  {
+    id: 5,
+    title: "LLM 20 Questions",
+    description: "Guess the secret word in this cooperative game of question asking and answering",
+    type: "Simulation Competition",
+    teams: 832,
+    timeRemaining: "8 months ago",
+    prize: "$50,000",
+    image: "public/thumb76_76 (20).png"}
+    ,
+  {
+    id: 6,
+    title: "USPTO - Explainable AI for Patent Professionals",
+    description: "Help patent professionals understand AI results through a familiar query language",
+    type: "Code Competition",
+    teams: 571,
+    timeRemaining: "10 months ago",
+    prize: "$50,000",
+    image: "public/thumb76_76 (21).png"},
+  {
+    id: 7,
+    title: "NeurIPS 2024 - Lux AI Season 3",
+    description: "Deep space exploration!",
+    type: "Simulation Competition",
+    teams: 701,
+    timeRemaining: "2 months ago",
+    prize: "$50,000",
+    image:" public/thumb76_76 (11).png"},
+  {
+    id: 8,
+    title: "LLMs - You Can't Please Them All",
+    description: "Are LLM-judges robust to adversarial inputs?",
+    type: "Code Competition",
+    teams: 1693,
+    timeRemaining: "2 months ago",
+    prize: "$50,000",
+    image: " public/thumb76_76 (12).png"},
+  {
+    id: 9,
+    title: "Santa 2024 - The Perplexity Permutation Puzzle",
+    description: "Help Rudolph descramble holiday-related words to make the LLMs happy!",
+    type: "Code Competition",
+    teams: 1514,
+    timeRemaining: "3 months ago",
+    prize: "$50,000",
+    image: "public/thumb76_76 (16).png"},
+  {
+    id: 10,
+    title: "FIDE & Google Efficient Chess AI Challenge",
+    description: "Create agents to play chess with resource constraints",
+    type: "Simulation Competition",
+    teams: 1120,
+    timeRemaining: "2 months ago",
+    prize: "$50,000",
+    image:" public/thumb76_76 (15).png"},
+  {
+    id: 11,
+    title: "WSDM Cup - Multilingual Chatbot Arena",
+    description: "Predict human preference across multiple languages from real votes in the Chatbot Arena.",
+    type: "Code Competition",
+    teams: 950,
+    timeRemaining: "2 months ago",
+    prize: "$50,000",
+    image: "public/kaggle_66631_logos_thumb76_76.png"
+  },
+  {
+    id: 12,
+    title: "CZII - CryoET Object Identification",
+    description: "Find small biological structures in large 3D volumes",
+    type: "Code Competition",
+    teams: 931,
+    timeRemaining: "3 months ago",
+    prize: "$75,000",
+    image: "public/thumb76_76 (23).png"},
+  {
+    id: 13,
+    title: "AI Mathematical Olympiad - Progress Prize 2",
+    description: "Solve national-level math challenges using artificial intelligence models",
+    type: "Code Competition",
+    teams: 2212,
+    timeRemaining: "A month ago",
+    prize: "$2,117,152",
+    image: "public/kaggle_73231_logos_thumb76_76.png"
+  },
+  {
+    id: 14,
+    title: "Jane Street Real-Time Market Data Forecasting",
+    description: "Predict financial market responders using real-world data.",
+    type: "Code Competition",
+    teams: 3757,
+    timeRemaining: "2 months to go",
+    prize: "$120,000",
+    image: "public/thumb76_76 (16).png"
+  },
+  {
+    id: 15,
+    title: "Child Mind Institute — Problematic Internet Use",
+    description: "Relating Physical Activity to Problematic Internet Use",
+    type: "Code Competition",
+    teams: 3559,
+    timeRemaining: "5 months ago",
+    prize: "$60,000",
+    image: "public/kaggle_53666_logos_thumb76_76.jpg"
+  },
+  {
+    id: 16,
+    title: "Eedi - Mining Misconceptions in Mathematics",
+    description: "Predict affinity between misconceptions and incorrect answers (distractors) in multiple-choice questions",
+    type: "Code Competition",
+    teams: 1446,
+    timeRemaining: "5 months ago",
+    prize: "$55,000",
+    image: "public/thumb76_76 (18).png"},
     {
-      id: 1,
+      id: 17,
       title: "ARC Prize 2025",
       type: "Code Competition",
       teams: 357,
       timeRemaining: "6 months to go",
       prize: "$725,000",
-      image: "/api/placeholder/500/300"
-    },
+      image: "public/kaggle_67357_logos_thumb76_76.png"},
     {
-      id: 2,
+      id: 18,
       title: "Stanford RNA 3D Folding",
       type: "Code Competition",
       teams: 1265,
       timeRemaining: "18 days to go",
       prize: "$75,000",
-      image: "/api/placeholder/500/300"
-    },
+      image: "public/thumb76_76 (5).png"},
     {
-      id: 3,
+      id: 19,
       title: "Drawing with LLMs",
       type: "Code Competition", 
       teams: 1276,
       timeRemaining: "16 days to go",
       prize: "$50,000",
-      image: "/api/placeholder/500/300"
-    },
+      image: "public/thumb76_76 (6).png"},
     {
-      id: 4,
+      id: 20,
       title: "March Machine Learning Mania 2025",
       type: "Code Competition",
       teams: 1727,
       timeRemaining: "A month ago",
       prize: "$50,000",
-      image: "/api/placeholder/500/300"
-    }
+      image: "public/kaggle_46801_logos_thumb76_76.png"}
   ];
 
   return (
@@ -85,7 +231,7 @@ export default function FeaturedPage() {
         {filterActive && (
           <div className="mb-6 flex items-center gap-2">
             <div className="flex items-center space-x-2 bg-gray-100 hover:bg-gray-200 transition-colors duration-200 shadow-sm border border-gray-300 rounded-full px-4 py-1.5 text-sm text-gray-700">
-              <span className="font-medium">All competitions</span>
+              <span className="font-medium">Featured</span>
               <button
                 onClick={() => setFilterActive(false)}
                 className="p-1 rounded-full hover:bg-gray-300 transition"
