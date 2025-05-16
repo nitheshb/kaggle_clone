@@ -20,9 +20,9 @@ function Rules() {
   };
 
   return (
-    <div className="flex">
+    <div className="flex scroll-smooth">
       {/* Main content */}
-      <div className="flex-1 pr-8 overflow-y-auto">
+      <div className="flex-1 pr-8">
         <h2 className="text-2xl font-bold text-gray-800 mb-6">Rules</h2>
         
         <p className="text-gray-700 mb-6">

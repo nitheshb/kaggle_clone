@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MessageSquare, Search, Filter, ChevronDown, ChevronUp, MoreHorizontal } from 'lucide-react';
 import { UserAvatarLarge, getBadgeColor } from './UserComponents';
 
 const DiscussionList = ({ discussions }) => {
+  // Add state to track votes for each discussion
+  const [discussionVotes, setDiscussionVotes] = useState(
+    discussions.reduce((acc, discussion) => {
+      acc[discussion.id] = discussion.upvotes;
+      return acc;
+    }, {})
+  );
+
+  // Function to handle upvote
+  const handleUpvote = (id) => {
+    setDiscussionVotes(prev => ({
+      ...prev,
+      [id]: prev[id] + 1
+    }));
+  };
+
+  // Function to handle downvote
+  const handleDownvote = (id) => {
+    setDiscussionVotes(prev => ({
+      ...prev,
+      [id]: prev[id] - 1
+    }));
+  };
+
   return (
     <div className="mb-12">
       <div className="flex items-center mb-4">
@@ -78,12 +102,21 @@ const DiscussionList = ({ discussions }) => {
               <div className="flex flex-col items-center">
                 {/* Upvote button with count */}
                 <div className="flex items-center rounded-full border border-gray-200 overflow-hidden mb-1">
-                  <div className="py-0.5 px-1.5 bg-gray-100 border-r border-gray-200">
+                  <button 
+                    className="py-0.5 px-1.5  border-r border-gray-200 hover:bg-gray-200"
+                    onClick={() => handleUpvote(item.id)}
+                  >
                     <ChevronUp size={12} className="text-gray-500" />
-                  </div>
+                  </button>
                   <div className="py-0.5 px-2">
-                    <span className="font-medium text-xs text-gray-800">{item.upvotes}</span>
+                    <span className="font-medium text-xs text-gray-800">{discussionVotes[item.id]}</span>
                   </div>
+                  <button 
+                    className="py-0.5 px-1.5  border-l border-gray-200 hover:bg-gray-200"
+                    onClick={() => handleDownvote(item.id)}
+                  >
+                    <ChevronDown size={12} className="text-gray-500" />
+                  </button>
                 </div>
                 {/* Comments count */}
                 <div className="text-2xs text-gray-500">{item.comments} comments</div>

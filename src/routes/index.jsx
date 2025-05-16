@@ -15,9 +15,7 @@ import Featured from '../pages/Featured';
 import PredictCaloriesExpenditure from '../pages/PredictCalorieExpenditure';
 import YaleUNCCH from '../pages/YaleUNCCH';
 import UserRankings from '../pages/UserRankings';
-
-// Inside <Routes>:
-
+import GeneralForum from '../components/Discussions/GeneralForum'; // ✅ Add this
 
 const AppRoutes = () => {
   return (
@@ -28,18 +26,21 @@ const AppRoutes = () => {
       <Route path="/models" element={<Layout><Models /></Layout>} />
       <Route path="/code" element={<Layout><Code /></Layout>} />
       <Route path="/discussions" element={<Layout><Discussions /></Layout>} />
-     <Route path="/user-rankings" element={<Layout><UserRankings /></Layout>} />
 
+      {/* ✅ Restored missing general forum routes */}
+      <Route path="/discussions/general" element={<Layout><GeneralForum /></Layout>} />
+      <Route path="/forums/general" element={<Layout><GeneralForum /></Layout>} />
+      <Route path="/forums/:category" element={<Layout><GeneralForum /></Layout>} />
+      
+      <Route path="/user-rankings" element={<Layout><UserRankings /></Layout>} />
       <Route path="/courses" element={<Layout><Courses /></Layout>} />
       <Route path="/learn" element={<Layout><Learn /></Layout>} />
       <Route path="/all-competetions" element={<Layout><AllCompetetions /></Layout>} />
-    {/* <Route path="/user-rankings" element={<UserRankings />} /> */}
-     <Route path="/featured" element={<Layout><Featured /></Layout>} />
+      <Route path="/featured" element={<Layout><Featured /></Layout>} />
       <Route path="/predict-calorie-expenditure" element={<Layout><PredictCaloriesExpenditure /></Layout>} />
       <Route path="/yale-unc-ch-geophysical-waveform-inversion" element={<Layout><YaleUNCCH /></Layout>} />
       <Route path="/image-matching-challenge-2025" element={<Layout><ImageMatching /></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />
-
     </Routes>
   );
 };
