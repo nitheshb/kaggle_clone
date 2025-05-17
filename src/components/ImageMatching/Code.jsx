@@ -15,7 +15,7 @@
 
 // import React from "react";
 // import { Search, SlidersHorizontal, Plus, ChevronDown, MoreVertical, ChevronUp } from "lucide-react";
- 
+
 // const code = () => {
 //   return (
 //     <div className="max-w-7xl mx-auto px-16 py-10">
@@ -27,7 +27,7 @@
 //           New Notebook
 //         </button>
 //       </div>
- 
+
 //       {/* Search bar with filters */}
 //       <div className="relative mb-8">
 //         <div className="flex items-center w-full px-6 py-3 border border-gray-300 rounded-full">
@@ -43,7 +43,7 @@
 //           </div>
 //         </div>
 //       </div>
- 
+
 //       {/* Tabs */}
 //       <div className="border-b border-gray-200 mb-4">
 //         <div className="flex space-x-8">
@@ -57,7 +57,7 @@
 //           </div>
 //         </div>
 //       </div>
- 
+
 //       {/* Notebook List */}
 //       <div className="space-y-6">
 //         {/* First Notebook */}
@@ -94,7 +94,7 @@
 //             </div>
 //           </div>
 //         </div>
- 
+
 //         {/* Second Notebook */}
 //         <div className="py-4 border-b border-gray-200">
 //           <div className="flex">
@@ -131,7 +131,7 @@
 //             </div>
 //           </div>
 //         </div>
- 
+
 //         {/* Third Notebook */}
 //         <div className="py-4 border-b border-gray-200">
 //           <div className="flex">
@@ -165,14 +165,14 @@
 //                  <span className="text-gray-800">0 comments</span> · Image Matching Challenge 2025
 //               </div>
 //             </div>
-            
+
 //           </div>
 //         </div>
 //       </div>
 //     </div>
 //   );
 // };
- 
+
 // export default code;
 
 
@@ -197,59 +197,59 @@ function NotebooksInterface() {
         notebook.progressColor = badgeInfo.colorValue;
       });
     };
-    
+
     setNotebookColors();
   }, []);
 
   // Handle tab switching with transition
   const handleTabSwitch = (tabName) => {
     if (activeTab === tabName) return;
-    
+
     setIsTransitioning(true);
     setTimeout(() => {
       setActiveTab(tabName);
       setIsTransitioning(false);
     }, 150);
   };
-  
+
   // Data for notebook entries with real avatar URLs
   const notebooks = [
     {
       id: 1,
-      title: "S05E05 | Calorie Expenditure | Hill Climbing",
+      title: "image_match_",
       avatar: "https://storage.googleapis.com/kaggle-avatars/thumbnails/16179447-kg.png?t=2024-09-12-18-47-35",
-      updated: "1h ago",
-      score: "0.05697",
-      comments: 2,
-      tag: "Predict Calorie Expenditure",
-      badge: "Silver",
-      progress: 30,
+      updated: "1d ago",
+      // score: "0.05697",
+      comments: 0,
+      tag: "Image Matching Challenge 2025",
+      // badge: "Silver",
+      progress: 1,
       userName: "Mahdi Ravaghi",
       progressColor: "rgb(108, 117, 125)" // Silver color
     },
     {
       id: 2,
-      title: "Calories Prediction | Simple XGBoost-CatBoost | R",
+      title: "Sample Code for VGGT Inference",
       avatar: "https://storage.googleapis.com/kaggle-avatars/thumbnails/13381855-kg.JPG",
-      updated: "26m ago",
-      score: "0.05731",
+      updated: "10d ago",
+      // score: "0.05731",
       comments: 5,
-      tag: "Predict Calorie Expenditure",
-      badge: "Silver",
-      progress: 60,
+      tag: "Image Matching Challenge 2025",
+      badge: "Bronze",
+      progress: 23,
       userName: "Ieman Ihsan",
-      progressColor: "rgb(108, 117, 125)" // Silver color
+      progressColor: "rgb(180, 83, 9)" // Bronze color
     },
     {
       id: 3,
-      title: "S5E5: Predict Calorie Expenditure",
+      title: "Baseline: DINO+ALIKED+LightGLUE improved",
       avatar: "https://storage.googleapis.com/kaggle-avatars/thumbnails/801148-kg.jpg?t=2025-01-29-15-53-14",
-      updated: "3h ago",
-      score: "0.05901",
+      updated: "10d ago",
+      // score: "0.05901",
       comments: 0,
-      tag: "Predict Calorie Expenditure",
+      tag: "Image Matching Challenge 2025",
       badge: "Bronze",
-      progress: 60,
+      progress: 9,
       userName: "Kheirallah Samaha",
       progressColor: "rgb(180, 83, 9)" // Bronze color
     },
@@ -304,15 +304,15 @@ function NotebooksInterface() {
           <svg viewBox="0 0 140 140" width="140" height="140">
             {/* Blue background circle */}
             <circle cx="70" cy="70" r="70" fill="#29B6F6" />
-            
+
             {/* Notebook/book icon */}
             <g transform="translate(35, 30)">
               {/* Book body */}
               <rect x="0" y="5" width="70" height="60" rx="2" fill="#111" />
-              
+
               {/* Book details - white line */}
               <rect x="0" y="15" width="70" height="2" fill="#FFF" opacity="0.3" />
-              
+
               {/* Book pages */}
               <rect x="0" y="0" width="70" height="10" rx="1" fill="#FFF" />
               <rect x="5" y="20" width="20" height="3" fill="#FFF" opacity="0.5" />
@@ -325,7 +325,7 @@ function NotebooksInterface() {
       <p className="text-gray-600 mb-1">To save a Notebook, look for the Bookmark icon in the overflow menu for that Notebook.</p>
       <p className="text-gray-600">
         <span>View all your bookmarks on your profile.</span>
-       
+
       </p>
     </div>
   );
@@ -356,7 +356,7 @@ function NotebooksInterface() {
                       }}
                     ></circle>
                   </svg>
-                  <div 
+                  <div
                     className="w-10 h-10 rounded-full bg-cover bg-center absolute"
                     style={{
                       backgroundImage: `url('${notebook.avatar}')`,
@@ -377,23 +377,24 @@ function NotebooksInterface() {
                   </div>
                 </div>
                 <div className="text-xs text-gray-500">
-                  Updated {notebook.updated} · Score: {notebook.score} · 
-                  <a href="#" className="underline ml-1">{notebook.comments} comments</a> · 
-                  <a href="#" className="text-blue-700 ml-1">{notebook.tag}</a> +1
+                  Updated {notebook.updated} ·
+                  {/* Score: {notebook.score} ·  */}
+                  <a href="#" className="underline ml-1">{notebook.comments} comments</a> ·
+                  <a href="#" className="text-blue-700 ml-1">{notebook.tag}</a>
                 </div>
               </div>
             </div>
             <div className="flex items-center">
               <div className="flex items-center mr-2">
-                {notebook.badge === "Silver" && 
+                {notebook.badge === "Silver" &&
                   <span className="inline-block w-2.5 h-2.5 bg-gray-400 rounded-full mr-1"></span>
                 }
-                {notebook.badge === "Bronze" && 
+                {notebook.badge === "Bronze" &&
                   <span className="inline-block w-2.5 h-2.5 bg-amber-600 rounded-full mr-1"></span>
                 }
                 <span className={`text-xs ${getBadgeColor(notebook.badge).textClass}`}>{notebook.badge}</span>
               </div>
-              
+
               <div className="flex items-center rounded-full border border-gray-200 overflow-hidden mr-2">
                 <div className="py-0.5 px-1.5 bg-gray-100 border-r border-gray-200">
                   <ChevronUp size={12} className="text-gray-500" />
@@ -402,7 +403,7 @@ function NotebooksInterface() {
                   <span className="font-medium text-sm text-gray-800">{notebook.progress}</span>
                 </div>
               </div>
-              
+
               <button className="p-1">
                 <MoreHorizontal size={16} className="text-gray-500" />
               </button>
@@ -418,22 +419,22 @@ function NotebooksInterface() {
     // Apply opacity class based on transition state
     const opacityClass = isTransitioning ? 'opacity-0' : 'opacity-100';
     const transitionClass = 'transition-opacity duration-150 ease-in-out';
-    
+
     if (activeTab === 'Your Work') {
       return (
         <div className={`${opacityClass} ${transitionClass}`}>
-          <EmptyNotebooksState 
-            title="No notebooks found" 
-            message="You're not currently signed in. Sign in to see your work" 
+          <EmptyNotebooksState
+            title="No notebooks found"
+            message="You're not currently signed in. Sign in to see your work"
           />
         </div>
       );
     } else if (activeTab === 'Shared With You') {
       return (
         <div className={`${opacityClass} ${transitionClass}`}>
-          <EmptyNotebooksState 
-            title="No shared notebooks" 
-            message="No one has shared any notebooks with you yet" 
+          <EmptyNotebooksState
+            title="No shared notebooks"
+            message="No one has shared any notebooks with you yet"
           />
         </div>
       );
@@ -482,25 +483,25 @@ function NotebooksInterface() {
         <div className="border-b border-gray-200 mb-4">
           <div className="flex justify-between">
             <div className="flex">
-              <button 
+              <button
                 className={`px-4 py-2 text-sm font-medium ${activeTab === 'All' ? 'border-b-2 text-gray-700 border-gray-900' : 'text-gray-500'}`}
                 onClick={() => handleTabSwitch('All')}
               >
                 All
               </button>
-              <button 
+              <button
                 className={`px-4 py-2 text-sm font-medium ${activeTab === 'Your Work' ? 'border-b-2 text-gray-700 border-gray-900' : 'text-gray-500'}`}
                 onClick={() => handleTabSwitch('Your Work')}
               >
                 Your Work
               </button>
-              <button 
+              <button
                 className={`px-4 py-2 text-sm font-medium ${activeTab === 'Shared With You' ? 'border-b-2 text-gray-700 border-gray-900' : 'text-gray-500'}`}
                 onClick={() => handleTabSwitch('Shared With You')}
               >
                 Shared With You
               </button>
-              <button 
+              <button
                 className={`px-4 py-2 text-sm font-medium ${activeTab === 'Bookmarks' ? 'border-b-2 text-gray-700 border-gray-900' : 'text-gray-500'}`}
                 onClick={() => handleTabSwitch('Bookmarks')}
               >

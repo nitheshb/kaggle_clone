@@ -20,7 +20,7 @@ import { Download, RefreshCw, ChevronDown, ChevronUp, Search } from 'lucide-reac
 const leaderboardData = [
   {
     rank: 1,
-    team: 'Meta Models',
+    team: 'YDoG2025',
     avatarUrl: 'https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png',
     score: 0.05634,
     entries: 44,
@@ -28,7 +28,7 @@ const leaderboardData = [
   },
   {
     rank: 2,
-    team: 'Cyril Bourgeois',
+    team: 'again ¯_(ツ)_/¯',
     avatarUrl: 'https://storage.googleapis.com/kaggle-avatars/thumbnails/6156634-kg.png?t=2024-10-24-17-57-31',
     score: 0.05650,
     entries: 36,
@@ -36,7 +36,7 @@ const leaderboardData = [
   },
   {
     rank: 3,
-    team: 'wind1234it',
+    team: 'ns64',
     avatarUrl: 'https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png',
     score: 0.05658,
     entries: 36,
@@ -48,7 +48,7 @@ const leaderboardData = [
 const additionalData = [
   {
     rank: 4,
-    team: 'Mahog',
+    team: 'ANANDIYA SHEEL DIWAN',
     avatarUrl: 'https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png',
     score: 0.05668,
     entries: 25,
@@ -56,7 +56,7 @@ const additionalData = [
   },
   {
     rank: 5,
-    team: 'Mirazul Islam',
+    team: 'Nazarko99',
     avatarUrl: 'https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png',
     score: 0.05668,
     entries: 30,
@@ -296,9 +296,10 @@ function Leaderboard() {
                     <td className="px-4 py-3 text-sm text-right">{entry.entries}</td>
                     <td className="px-4 py-3 text-sm text-right">{entry.last}</td>
                     <td className="px-4 py-3 text-sm text-right">
-                      {entry.rank <= 3 ? null : (
+                      {/* {entry.rank <= 3 ? null : (
                         <button className="text-blue-600 hover:underline">Join</button>
-                      )}
+                      )} */}
+                      
                     </td>
                   </tr>
                 ))

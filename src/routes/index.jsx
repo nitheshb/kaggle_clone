@@ -19,6 +19,7 @@ import GeneralForum from '../components/Discussions/GeneralForum'; // ✅ Add th
 import CompetitionHost from '../pages/HostCompetition';
 import Podcast from '../pages/podcast';
 import Terms from '../pages/Terms';
+import AuthPage from '../pages/AuthPage'; // ✅ Add this
 
 const AppRoutes = () => {
   return (
@@ -34,7 +35,7 @@ const AppRoutes = () => {
       <Route path="/discussions/general" element={<Layout><GeneralForum /></Layout>} />
       <Route path="/forums/general" element={<Layout><GeneralForum /></Layout>} />
       <Route path="/forums/:category" element={<Layout><GeneralForum /></Layout>} />
-      
+
       <Route path="/user-rankings" element={<Layout><UserRankings /></Layout>} />
       <Route path="/courses" element={<Layout><Courses /></Layout>} />
       <Route path="/learn" element={<Layout><Learn /></Layout>} />
@@ -44,9 +45,13 @@ const AppRoutes = () => {
       <Route path="/yale-unc-ch-geophysical-waveform-inversion" element={<Layout><YaleUNCCH /></Layout>} />
       <Route path="/image-matching-challenge-2025" element={<Layout><ImageMatching /></Layout>} />
       <Route path="/competitions/predict-podcast-listening-time" element={<Layout><Podcast /></Layout>} />
-      <Route path="/host-competition" element={<Layout><CompetitionHost/></Layout>} />
-      <Route path="/Terms" element={<Layout><Terms/></Layout>} />
+      <Route path="/host-competition" element={<Layout><CompetitionHost /></Layout>} />
+      <Route path="/Terms" element={<Layout><Terms /></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />
+      <Route path="/signin" element={<AuthPage />} />
+      <Route path="/register" element={<AuthPage />} />
+
+      <Route path="/competitions/image-matching-challenge-2025" element={<Layout><ImageMatching /></Layout>} />
     </Routes>
   );
 };

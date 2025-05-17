@@ -58,7 +58,7 @@ export default function CompetitionsPage() {
     },
     {
       id: 3,
-      title: <Link to="/image-matching-challenge-2025" className="[hover: cursor-pointer">Image Matching Challenge</Link>,
+     title: <Link to="/competitions/image-matching-challenge-2025" className="[hover: cursor-pointer">Image Matching Challenge 2025</Link>,
       series: null,
       description: "Reconstruct 3D scenes from messy image collections.",
       type: "Research",
