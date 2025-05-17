@@ -16,6 +16,9 @@ import PredictCaloriesExpenditure from '../pages/PredictCalorieExpenditure';
 import YaleUNCCH from '../pages/YaleUNCCH';
 import UserRankings from '../pages/UserRankings';
 import GeneralForum from '../components/Discussions/GeneralForum'; // ✅ Add this
+import CompetitionHost from '../pages/HostCompetition';
+import Podcast from '../pages/podcast';
+import Terms from '../pages/Terms';
 
 const AppRoutes = () => {
   return (
@@ -40,6 +43,9 @@ const AppRoutes = () => {
       <Route path="/predict-calorie-expenditure" element={<Layout><PredictCaloriesExpenditure /></Layout>} />
       <Route path="/yale-unc-ch-geophysical-waveform-inversion" element={<Layout><YaleUNCCH /></Layout>} />
       <Route path="/image-matching-challenge-2025" element={<Layout><ImageMatching /></Layout>} />
+      <Route path="/competitions/predict-podcast-listening-time" element={<Layout><Podcast /></Layout>} />
+      <Route path="/host-competition" element={<Layout><CompetitionHost/></Layout>} />
+      <Route path="/Terms" element={<Layout><Terms/></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />
     </Routes>
   );

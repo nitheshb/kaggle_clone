@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, ChevronDown, Grid, LayoutGrid, MoreHorizontal, X, Bookmark, PlusCircle } from 'lucide-react';
-import { useNavigate } from "react-router-dom";
+
 
 export default function CompetitionsPage() {
   // State for view mode and sort options
@@ -71,7 +71,7 @@ export default function CompetitionsPage() {
     },
     {
       id: 4,
-      title: "Predict Podcast Listening Time",
+      title: <Link to="/competitions/predict-podcast-listening-time" className="[hover: cursor-pointer">Predict Podcast Listening Time</Link>,
       series: "Playground Series - Season 5, Episode 4",
       type: "Playground",
       teams: 3310,
