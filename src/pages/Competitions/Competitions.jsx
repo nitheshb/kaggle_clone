@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Competitions = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [showNavbarA, setShowNavbarA] = useState(true);
   const [showNavbarB, setShowNavbarB] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -19,6 +20,9 @@ const Competitions = () => {
   const headerRef = useRef(null);
   const searchRef = useRef(null);
   const navigate = useNavigate();
+   const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
 
 
   const gettingStartedCompetitions = [
@@ -372,12 +376,110 @@ const Competitions = () => {
             className="w-full py-3 pl-10 pr-24 bg-white rounded-3xl text-md border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-gray-600"
           />
           <button
+          onClick={togglePopup}
             className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center text-black font-medium rounded-3xl px-3 py-1 transition-colors hover:bg-gray-300 hover:text-gray-700"
           >
           <Filter className="h-5 w-5 mr-1" />
           <span>Filters</span>
           </button>
         </div>
+
+         {isOpen && (
+          <div className="px-10 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-end z-50">
+            <div className="bg-white rounded-lg shadow-xl max-w-[40%] w-full max-h-[90vh] overflow-y-auto px-5">
+              <div className="p-4 border-b border-gray-200 flex justify-between items-center">
+                <h3 className="text-lg font-semibold">Filters</h3>
+                <button
+                  onClick={togglePopup}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+
+              <div className="p-4">
+                <div className="mb-6">
+                  <h4 className="font-medium text-gray-700 mb-2">TAGS</h4>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Search for tags"
+                      className="w-full p-2 pl-8 border border-gray-300 rounded-full"
+                    />
+                    <div className="absolute left-3 top-2.5 text-gray-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-medium text-gray-700 mb-2">STATUS</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Active</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Entered</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Completed</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Spotlight</button>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-medium text-gray-700 mb-2">PRIZES AND AWARDS</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Monetary</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Medals</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Other</button>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-medium text-gray-700 mb-2">CATEGORIES</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Featured</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Research</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Getting Started</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Playground</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Community</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Analytics</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Simulations</button>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-medium text-gray-700 mb-2">PARTICIPATION</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Open to Everyone</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Invitation Only</button>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-medium text-gray-700 mb-2">FOR HOSTS</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Your Competitions</button>
+                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Cloneable Competitions</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-4 border-t border-gray-200 flex justify-end gap-4">
+                <button
+                  onClick={togglePopup}
+                  className="bg-black text-white font-semibold py-2 px-4 rounded-md "
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={togglePopup}
+                  className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  Done
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
 
 

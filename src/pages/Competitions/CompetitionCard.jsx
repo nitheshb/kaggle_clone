@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import { MoreVertical } from 'lucide-react';
 
 const CompetitionCard = ({ competition, featured = false }) => {
+  const updatedString = competition.title.replace(/ /g, "-").toLowerCase();
+
   return (
     <Link
-      to={`/competition/${competition.id}`}
+      to={`/competitions/${updatedString}`}
       className="h-full flex flex-col overflow-hidden rounded-xl border border-gray-200 hover:border-gray-400 hover:shadow-md transition-shadow duration-200 bg-white"
     >
       <div className="relative">

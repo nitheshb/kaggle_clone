@@ -23,6 +23,9 @@ import Podcast from '../pages/podcast';
 import Terms from '../pages/Terms';
 import AuthPage from '../pages/AuthPage'; // ✅ Add this
 import DocumentationPage from '../pages/Documentation';
+import SupportContact from '../pages/SupportContact'; // ✅ Add this
+import KaggleCommunityGuidelines from '../pages/CommunityGuidelines.jsx';
+import CommunityGuidelines from '../pages/CommunityGuidelines.jsx';
 
 // Inside <Routes>:
 
@@ -58,6 +61,8 @@ const AppRoutes = () => {
       <Route path="/competitions/predict-podcast-listening-time" element={<Layout><Podcast /></Layout>} />
       <Route path="/host-competition" element={<Layout><CompetitionHost /></Layout>} />
       <Route path="/Terms" element={<Layout><Terms /></Layout>} />
+      <Route path="/support/contact" element={<Layout><SupportContact /></Layout>} />
+      <Route path="/community-guidelines" element={<Layout><CommunityGuidelines /></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />
       <Route path="/signin" element={<AuthPage />} />
       <Route path="/register" element={<AuthPage />} />
