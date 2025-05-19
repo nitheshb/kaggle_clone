@@ -2,7 +2,7 @@
 import FeaturedPage from "../components/Featured/Featured"
 function Featured() {
   return (
-   <div className="min-h-screen bg-gray-100 px-6 py-8">
+   <div className="min-h-screen bg-white-100 px-6 py-8">
 
            
           <FeaturedPage />

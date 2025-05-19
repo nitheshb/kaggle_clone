@@ -22,6 +22,10 @@ import CompetitionHost from '../pages/HostCompetition';
 import Podcast from '../pages/podcast';
 import Terms from '../pages/Terms';
 import AuthPage from '../pages/AuthPage'; // ✅ Add this
+import DocumentationPage from '../pages/Documentation';
+
+// Inside <Routes>:
+
 
 const AppRoutes = () => {
   return (
@@ -40,6 +44,9 @@ const AppRoutes = () => {
 
       <Route path="/user-rankings" element={<Layout><UserRankings /></Layout>} />
       {/* <Route path="/courses" element={<Layout><Courses /></Layout>} /> */}
+     <Route path="/user-rankings" element={<Layout><UserRankings /></Layout>} />
+     <Route path="/Documentation" element={<Layout><DocumentationPage/></Layout>} />
+      <Route path="/courses" element={<Layout><Courses /></Layout>} />
       <Route path="/learn" element={<Layout><Learn /></Layout>} />
       <Route path="/courses/:courseSlug" element={<CourseDetail />} />
       <Route path="/all-competetions" element={<Layout><AllCompetetions /></Layout>} />

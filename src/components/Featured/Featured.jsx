@@ -45,7 +45,7 @@ export default function FeaturedPage() {
     teams: 617,
     timeRemaining: "A month to go",
     prize: "$1,225,000",
-    image: "public/thumb76_76 (10).png"},
+    image: "thumb76_76 (10).png"},
   {
     id: 2,
     title: "NeurIPS - Ariel Data Challenge 2024",
@@ -54,7 +54,7 @@ export default function FeaturedPage() {
     teams: 1151,
     timeRemaining: "6 months ago",
     prize: "$50,000",
-    image: "public/thumb76_76 (19).png",},
+    image: "thumb76_76 (19).png",},
   {
     id: 3,
     title: "ARC Prize 2024",
@@ -63,7 +63,7 @@ export default function FeaturedPage() {
     teams: 1427,
     timeRemaining: "6 months ago",
     prize: "$1,100,000",
-    image: "public/kaggle_67357_logos_thumb76_76.png"
+    image: "kaggle_67357_logos_thumb76_76.png"
   },
   {
     id: 4,
@@ -73,7 +73,7 @@ export default function FeaturedPage() {
     teams: 1874,
     timeRemaining: "7 months ago",
     prize: "$50,000",
-    image: "public/kaggle_36363_logos_thumb76_76.png"}
+    image: "kaggle_36363_logos_thumb76_76.png"}
     ,  {
     id: 5,
     title: "LLM 20 Questions",
@@ -82,7 +82,7 @@ export default function FeaturedPage() {
     teams: 832,
     timeRemaining: "8 months ago",
     prize: "$50,000",
-    image: "public/thumb76_76 (20).png"}
+    image: "thumb76_76 (20).png"}
     ,
   {
     id: 6,
@@ -92,7 +92,7 @@ export default function FeaturedPage() {
     teams: 571,
     timeRemaining: "10 months ago",
     prize: "$50,000",
-    image: "public/thumb76_76 (21).png"},
+    image: "thumb76_76 (21).png"},
   {
     id: 7,
     title: "NeurIPS 2024 - Lux AI Season 3",
@@ -101,7 +101,7 @@ export default function FeaturedPage() {
     teams: 701,
     timeRemaining: "2 months ago",
     prize: "$50,000",
-    image:" public/thumb76_76 (11).png"},
+    image:" thumb76_76 (11).png"},
   {
     id: 8,
     title: "LLMs - You Can't Please Them All",
@@ -110,7 +110,7 @@ export default function FeaturedPage() {
     teams: 1693,
     timeRemaining: "2 months ago",
     prize: "$50,000",
-    image: " public/thumb76_76 (12).png"},
+    image: " thumb76_76 (12).png"},
   {
     id: 9,
     title: "Santa 2024 - The Perplexity Permutation Puzzle",
@@ -119,7 +119,7 @@ export default function FeaturedPage() {
     teams: 1514,
     timeRemaining: "3 months ago",
     prize: "$50,000",
-    image: "public/thumb76_76 (16).png"},
+    image: "thumb76_76 (16).png"},
   {
     id: 10,
     title: "FIDE & Google Efficient Chess AI Challenge",
@@ -128,7 +128,7 @@ export default function FeaturedPage() {
     teams: 1120,
     timeRemaining: "2 months ago",
     prize: "$50,000",
-    image:" public/thumb76_76 (15).png"},
+    image:" thumb76_76 (15).png"},
   {
     id: 11,
     title: "WSDM Cup - Multilingual Chatbot Arena",
@@ -137,7 +137,7 @@ export default function FeaturedPage() {
     teams: 950,
     timeRemaining: "2 months ago",
     prize: "$50,000",
-    image: "public/kaggle_66631_logos_thumb76_76.png"
+    image: "kaggle_66631_logos_thumb76_76.png"
   },
   {
     id: 12,
@@ -147,7 +147,7 @@ export default function FeaturedPage() {
     teams: 931,
     timeRemaining: "3 months ago",
     prize: "$75,000",
-    image: "public/thumb76_76 (23).png"},
+    image: "thumb76_76 (23).png"},
   {
     id: 13,
     title: "AI Mathematical Olympiad - Progress Prize 2",
@@ -156,7 +156,7 @@ export default function FeaturedPage() {
     teams: 2212,
     timeRemaining: "A month ago",
     prize: "$2,117,152",
-    image: "public/kaggle_73231_logos_thumb76_76.png"
+    image: "kaggle_73231_logos_thumb76_76.png"
   },
   {
     id: 14,
@@ -166,7 +166,7 @@ export default function FeaturedPage() {
     teams: 3757,
     timeRemaining: "2 months to go",
     prize: "$120,000",
-    image: "public/thumb76_76 (16).png"
+    image: "thumb76_76 (16).png"
   },
   {
     id: 15,

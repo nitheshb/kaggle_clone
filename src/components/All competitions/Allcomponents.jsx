@@ -178,7 +178,7 @@ export default function CompetitionsPage() {
       teams: 617,
       timeRemaining: "a month to go",
       prize: "$1,225,000",
-      image: "public/thumb76_76 (10).png"
+      image: "thumb76_76 (10).png"
 
     },
     {
@@ -189,7 +189,7 @@ export default function CompetitionsPage() {
       teams: 701,
       timeRemaining: "2 months ago",
       prize: "$50,000",
-      image: "public/thumb76_76 (11).png"},
+      image: "thumb76_76 (11).png"},
   {
       id: 16,
       title: "CIBMTR - Equity in post-HCT Survival Predictions",
@@ -198,7 +198,7 @@ export default function CompetitionsPage() {
       teams: 3325,
       timeRemaining: "2 months ago",
       prize: "$50,000",
-        image: "public/thumb76_76.jpg"},
+        image: "thumb76_76.jpg"},
       {
       id: 17,
       title: "LLMs - You Can't Please Them All",
@@ -207,7 +207,7 @@ export default function CompetitionsPage() {
       teams: 1693,
       timeRemaining: "2 months ago",
       prize: "$50,000",
-      image: "public/thumb76_76 (12).png"},
+      image: "thumb76_76 (12).png"},
       {
       id: 18,
       title: "Regression with an Insurance Dataset",
@@ -225,7 +225,7 @@ export default function CompetitionsPage() {
       teams: 1514,
       timeRemaining: "3 months ago",
       prize: "$50,000",
-      image: "public/thumb76_76 (14).png"},
+      image: "thumb76_76 (14).png"},
       
       {
         
@@ -237,7 +237,7 @@ export default function CompetitionsPage() {
       teams: 1120,
       timeRemaining: "2 months ago",
       prize: "$50,000",
-      image: "public/thumb76_76 (15).png"}
+      image: "thumb76_76 (15).png"}
   ];
 
   // More options menu items
