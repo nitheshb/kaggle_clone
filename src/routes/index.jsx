@@ -11,6 +11,7 @@ import Learn from '../pages/Learn/Learn';
 import NotFound from '../pages/NotFound';
 import ImageMatching from '../pages/ImageMatching';
 import AllCompetetions from '../pages/AllCompetetions';
+import DataVisualization  from '../pages/Learn/DataVisualization/DataVisualization.jsx';
 import Featured from '../pages/Featured';
 import PredictCaloriesExpenditure from '../pages/PredictCalorieExpenditure';
 import YaleUNCCH from '../pages/YaleUNCCH';
@@ -37,9 +38,10 @@ const AppRoutes = () => {
       <Route path="/forums/:category" element={<Layout><GeneralForum /></Layout>} />
 
       <Route path="/user-rankings" element={<Layout><UserRankings /></Layout>} />
-      <Route path="/courses" element={<Layout><Courses /></Layout>} />
+      {/* <Route path="/courses" element={<Layout><Courses /></Layout>} /> */}
       <Route path="/learn" element={<Layout><Learn /></Layout>} />
       <Route path="/all-competetions" element={<Layout><AllCompetetions /></Layout>} />
+      <Route path="/courses/data-visualization" element={<Layout><DataVisualization /></Layout>} />
       <Route path="/featured" element={<Layout><Featured /></Layout>} />
       <Route path="/predict-calorie-expenditure" element={<Layout><PredictCaloriesExpenditure /></Layout>} />
       <Route path="/yale-unc-ch-geophysical-waveform-inversion" element={<Layout><YaleUNCCH /></Layout>} />

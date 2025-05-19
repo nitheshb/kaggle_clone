@@ -1,20 +1,15 @@
 import { useState, useEffect, useRef } from 'react';
-import { Filter, Flag, Star, FlaskRound, Users, ChevronLeft, ChevronRight, ChevronDown, } from 'lucide-react';
+import { Filter, Flag, Star, FlaskRound, Users, ChevronLeft, ChevronRight, ChevronDown,  } from 'lucide-react';
 import CompetitionNavbarA from '../../components/layout/NavbarA';
 import CompetitionNavbarB from './CompetitionNavbarB';
 import CompetitionCard from './CompetitionCard';
 import CategoryCard from './CategoryCard';
 import './Competitions.css';
 import { ArrowDown, List } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Competitions = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  };
   const [showNavbarA, setShowNavbarA] = useState(true);
   const [showNavbarB, setShowNavbarB] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -83,7 +78,7 @@ const Competitions = () => {
       category: 'Featured • Code Competition',
       teams: 375,
       prize: '$725,000',
-      daysToGo: '6 months to go'
+      daysToGo: '6mo to go'
     },
     {
       id: 6,
@@ -94,7 +89,7 @@ const Competitions = () => {
       category: 'Featured • Code Competition',
       teams: 1342,
       prize: '$75,000',
-      daysToGo: '16 days to go'
+      daysToGo: '15d to go'
     },
     {
       id: 7,
@@ -105,7 +100,7 @@ const Competitions = () => {
       category: 'Research • Code Competition',
       teams: 954,
       prize: '$65,000',
-      daysToGo: '22 days to go'
+      daysToGo: '21d to go'
     },
     {
       id: 8,
@@ -116,74 +111,74 @@ const Competitions = () => {
       category: 'Research • Code Competition',
       teams: 1706,
       prize: '$50,000',
-      daysToGo: '23 days to go'
+      daysToGo: '22d to go'
     },
     {
-      id: 9,
-      title: 'Drawing with LLMs',
-      description: 'Build and submit Kaggle Pa...',
-      image: 'images/drawing-with-llms.png',
-      overlayImage: 'images/Kaggle.png',
-      category: 'Featured • Code Competition',
-      teams: 1325,
-      prize: '$50,000',
-      daysToGo: '13 days to go'
-    },
-    {
-      id: 10,
-      title: 'image-matching-challenge-2025',
-      description: 'Reconstruct 3D scenes fro...',
-      image: 'images/image-matching-2025.png',
-      overlayImage: 'images/CTU.png',
-      category: 'Research • Code Competition',
-      teams: 724,
-      prize: '$50,000',
-      daysToGo: '19 days to go'
-    },
-    {
-      id: 11,
-      title: 'Yale/UNC-CH - Geophysical...',
-      description: 'Develop physics-guided ma...',
-      image: 'images/yale-unc-ch.png',
-      overlayImage: 'images/Yale.png',
-      category: 'Research',
-      teams: 547,
-      prize: '$50,000',
-      daysToGo: '2 months to go'
-    },
-    {
-      id: 12,
-      title: 'Predict Calorie Expenditure',
-      description: 'Playground Series - Season...',
-      image: 'images/predict-calorie.png',
-      overlayImage: 'images/Kaggle.png',
-      category: 'Playground',
-      teams: 2300,
-      prize: 'Swag',
-      daysToGo: '17 days to go'
-    },
-    {
-      id: 13,
-      title: 'Konwinski Prize',
-      description: '$1M for the AI that can clos...',
-      image: 'images/konwinski-prize.png',
-      overlayImage: 'images/KPrize.jpg',
-      category: 'Featured • Code Competition',
-      teams: 617,
-      prize: '$1,225,000',
-      daysToGo: 'A month to go'
-    },
-    {
-      id: 14,
-      title: 'Jane Street Real-Time Market Dat...',
-      description: 'Predict financial market res...',
-      image: 'images/jane-street-market.png',
-      overlayImage: 'images/JaneStreet.png',
-      category: 'Featured • Code Competition',
-      teams: 3757,
-      prize: '$120,000',
-      daysToGo: '2 months to go'
-    }
+    id: 9,
+    title: 'Drawing with LLMs',
+    description: 'Build and submit Kaggle Pa...',
+    image: 'images/drawing-with-llms.png',
+    overlayImage: 'images/Kaggle.png',
+    category: 'Featured • Code Competition',
+    teams: 1325,
+    prize: '$50,000',
+    daysToGo: '13d to go'
+  },
+  {
+    id: 10,
+    title: 'Image Matching Challenge 2025',
+    description: 'Reconstruct 3D scenes fro...',
+    image: 'images/image-matching-2025.png',
+    overlayImage: 'images/CTU.png',
+    category: 'Research • Code Competition',
+    teams: 724,
+    prize: '$50,000',
+    daysToGo: '17d to go'
+  },
+  {
+    id: 11,
+    title: 'Yale/UNC-CH - Geophysical...',
+    description: 'Develop physics-guided ma...',
+    image: 'images/yale-unc-ch.png',
+    overlayImage: 'images/Yale.png',
+    category: 'Research',
+    teams: 547,
+    prize: '$50,000',
+    daysToGo: '1mo to go'
+  },
+  {
+    id: 12,
+    title: 'Predict Calorie Expenditure',
+    description: 'Playground Series - Season...',
+    image: 'images/predict-calorie.png',
+    overlayImage: 'images/Kaggle.png',
+    category: 'Playground',
+    teams: 2300,
+    prize: 'Swag',
+    daysToGo: '17d to go'
+  },
+  {
+    id: 13,
+    title: 'Konwinski Prize',
+    description: '$1M for the AI that can clos...',
+    image: 'images/konwinski-prize.png',
+    overlayImage: 'images/KPrize.jpg',
+    category: 'Featured • Code Competition',
+    teams: 617,
+    prize: '$1,225,000',
+    daysToGo: '1mo to go'
+  },
+  {
+    id: 14,
+    title: 'Jane Street Real-Time Market Dat...',
+    description: 'Predict financial market res...',
+    image: 'images/jane-street-market.png',
+    overlayImage: 'images/JaneStreet.png',
+    category: 'Featured • Code Competition',
+    teams: 3757,
+    prize: '$120,000',
+    daysToGo: '2mo to go'
+  }
 
 
   ];
@@ -202,8 +197,7 @@ const Competitions = () => {
       title: 'Featured',
       icon: <Star className="w-5 h-5" />,
       description: 'Premier challenges with prizes',
-      iconColor: 'text-gray-700',
-      link: '/featured',
+      iconColor: 'text-gray-700'
     },
     {
       id: 3,
@@ -257,7 +251,7 @@ const Competitions = () => {
 
         // Show/hide NavbarA based on header position
         setShowNavbarA(headerRect.top > 0);
-
+        
         // Show/hide NavbarB based on search position
         setShowNavbarB(searchRect.top <= 0);
       }
@@ -267,7 +261,7 @@ const Competitions = () => {
     return () => window.removeEventListener('scroll', handleScrollWindow);
   }, []);
 
-
+  
 
   const scrollCategories = (direction) => {
     if (categoryRef.current) {
@@ -313,7 +307,7 @@ const Competitions = () => {
 
   const isAtRightEnd = Math.round(scrollPosition) >= Math.round(maxScroll) - 1;
 
-  const handleCategoryClick = (categoryLink) => {
+ const handleCategoryClick = (categoryLink) => {
     navigate(categoryLink); // Navigate to the provided link
   };
 
@@ -321,7 +315,7 @@ const Competitions = () => {
     <>
       <CompetitionNavbarA visible={showNavbarA} />
       <CompetitionNavbarB visible={showNavbarB} />
-
+      
       {/* Main Content */}
       <div className="max-w-[1200px] mx-auto px-2 md:px-6 pt-6 bg-white">
         <div ref={headerRef} className="flex flex-col md:flex-row items-center justify-between mb-6">
@@ -329,13 +323,27 @@ const Competitions = () => {
           <div className="flex flex-col w-full md:w-2/4">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Competitions</h1>
             <p className="text-gray-600 mb-6 text-[1.05rem] leading-6">
-              Grow your data science skills by competing in our exciting competitions. Find help in the
-              <span onClick={() => navigate('/documentation')} className="text-black underline cursor-pointer"> documentation </span>
-              or learn about <span onClick={() => navigate('/community-competitions')} className="text-black underline cursor-pointer">Community Competitions</span>.
-            </p>
+  Grow your data science skills by competing in our exciting competitions. Find help in the{' '}
+  <span 
+    onClick={() => navigate('/documentation')} 
+    className="text-black cursor-pointer"
+    style={{ textDecorationLine: 'underline', textDecorationThickness: '0.5px', textUnderlineOffset: '4px' }}
+  >
+    documentation
+  </span>{' '}
+  or learn about{' '}
+  <span 
+    onClick={() => navigate('/community-competitions')} 
+    className="text-black cursor-pointer"
+    style={{ textDecorationLine: 'underline', textDecorationThickness: '0.5px', textUnderlineOffset: '4px' }}
+  >
+    Community Competitions
+  </span>.
+</p>
+
             <div className="mb-6">
-              <span onClick={() => navigate('/host-competition')}
-                className="inline-block bg-gray-900 text-white rounded-full px-6 py-2 text-sm font-bold hover:bg-gray-800 transition-colors cursor-pointer">
+              <span onClick={() => navigate('/host-competition')} 
+                    className="inline-block bg-gray-900 text-white rounded-full px-6 py-2 text-sm font-bold hover:bg-gray-800 transition-colors cursor-pointer">
                 Host a Competition
               </span>
             </div>
@@ -343,14 +351,14 @@ const Competitions = () => {
 
           {/* Right Section - Illustration */}
           <div className="hidden md:flex md:w-2/4 justify-end">
-            <img
-              src="images/landing-header-light.svg"
-              alt="Competitions"
+            <img 
+              src="images/landing-header-light.svg" 
+              alt="Competitions" 
               className="h-52"
             />
           </div>
         </div>
-
+        
         <div ref={searchRef} className="relative mb-4 rounded-3xl border border-gray-200 group hover:border-black transition-colors">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -363,110 +371,13 @@ const Competitions = () => {
             className="w-full py-3 pl-10 pr-24 bg-white rounded-3xl text-md border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-gray-600"
           />
           <button
-            onClick={togglePopup}
-
             className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center text-black font-medium rounded-3xl px-3 py-1 transition-colors hover:bg-gray-300 hover:text-gray-700"
           >
-            <Filter className="h-5 w-5 mr-1" />
-            <span>Filters</span>
+          <Filter className="h-5 w-5 mr-1" />
+          <span>Filters</span>
           </button>
         </div>
-        {isOpen && (
-          <div className="px-10 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-end z-50">
-            <div className="bg-white rounded-lg shadow-xl max-w-[40%] w-full max-h-[90vh] overflow-y-auto px-5">
-              <div className="p-4 border-b border-gray-200 flex justify-between items-center">
-                <h3 className="text-lg font-semibold">Filters</h3>
-                <button
-                  onClick={togglePopup}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
 
-              <div className="p-4">
-                <div className="mb-6">
-                  <h4 className="font-medium text-gray-700 mb-2">TAGS</h4>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      placeholder="Search for tags"
-                      className="w-full p-2 pl-8 border border-gray-300 rounded-full"
-                    />
-                    <div className="absolute left-3 top-2.5 text-gray-400">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="font-medium text-gray-700 mb-2">STATUS</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Active</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Entered</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Completed</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Spotlight</button>
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="font-medium text-gray-700 mb-2">PRIZES AND AWARDS</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Monetary</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Medals</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Other</button>
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="font-medium text-gray-700 mb-2">CATEGORIES</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Featured</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Research</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Getting Started</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Playground</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Community</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Analytics</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Simulations</button>
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="font-medium text-gray-700 mb-2">PARTICIPATION</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Open to Everyone</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Invitation Only</button>
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="font-medium text-gray-700 mb-2">FOR HOSTS</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Your Competitions</button>
-                    <button className="px-4 py-1 rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">Cloneable Competitions</button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-4 border-t border-gray-200 flex justify-end gap-4">
-                <button
-                  onClick={togglePopup}
-                  className="bg-black text-white font-semibold py-2 px-4 rounded-md "
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={togglePopup}
-                  className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
-                >
-                  Done
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
 
 
         <div className="relative mb-8">
@@ -485,24 +396,24 @@ const Competitions = () => {
           >
             <div className="flex gap-3">
               {categories.map((category) => (
-                <CategoryCard key={category.id}
-                  category={category}
-                  handleClick={() => handleCategoryClick(category.link)} />
+                <CategoryCard key={category.id} 
+                category={category} 
+                 handleClick={() => handleCategoryClick(category.link)}/>
               ))}
             </div>
           </div>
 
-          {!isAtRightEnd && (
-            <button
-              onClick={() => scrollCategories('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-1 rounded-full hover:bg-gray-100 shadow"
-            >
-              <ChevronRight className="h-5 w-5 text-gray-700" />
-            </button>
-          )}
-        </div>
+  {!isAtRightEnd && (
+    <button
+      onClick={() => scrollCategories('right')}
+      className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-1 rounded-full hover:bg-gray-100 shadow"
+    >
+      <ChevronRight className="h-5 w-5 text-gray-700" />
+    </button>
+  )}
+</div>
 
-
+        
         {/* Getting Started Section */}
         <div className="mb-12">
           <div className="flex items-center justify-between">
@@ -510,24 +421,26 @@ const Competitions = () => {
               <Flag className="w-6 h-6 mr-2 text-black-500" />
               <h2 className="text-xl font-bold text-gray-900">Getting Started</h2>
             </div>
-            <span
-              onClick={() => handleCategoryClick('/competitions/getting-started')}
+             <span
+              onClick={() => handleCategoryClick('/competitions/getting-started')} 
               className="text-black-500 hover:underline text-[14.5px] font-bold cursor-pointer"
             >
               See all
             </span>
           </div>
-
+          
           <p className="text-gray-900 my-4">
             Competitions with approachable ML fundamentals.
           </p>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6  mt-10">
             {gettingStartedCompetitions.map((competition) => (
               <CompetitionCard key={competition.id} competition={competition} />
             ))}
           </div>
         </div>
+
+        <hr className="my-8 border-gray-300" />  
 
         {/* Featured Competitions Section */}
         <div className="mb-12">
@@ -544,7 +457,7 @@ const Competitions = () => {
               </button>
             </div>
           </div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
             {featuredCompetitions.map((competition) => (
               <CompetitionCard key={competition.id} competition={competition} featured={true} />
@@ -557,3 +470,12 @@ const Competitions = () => {
 };
 
 export default Competitions;
+
+
+
+
+
+
+
+
+

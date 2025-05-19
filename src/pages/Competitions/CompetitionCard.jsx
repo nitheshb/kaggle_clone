@@ -5,7 +5,7 @@ import { MoreVertical } from 'lucide-react';
 const CompetitionCard = ({ competition, featured = false }) => {
   return (
     <Link
-      to={`/competitions/${competition.title}`}
+      to={`/competition/${competition.id}`}
       className="h-full flex flex-col overflow-hidden rounded-xl border border-gray-200 hover:border-gray-400 hover:shadow-md transition-shadow duration-200 bg-white"
     >
       <div className="relative">
@@ -55,7 +55,7 @@ const CompetitionCard = ({ competition, featured = false }) => {
 
         <div className="text-sm text-gray-700 mb-1">{competition.category}</div>
 
-        <div className="text-sm text-gray-700 mb-1">{competition.teams} teams</div>
+        <div className="text-sm text-gray-700 mb-1">{competition.teams} Teams</div>
 
         <div className="border-b border-gray-300 -mx-4 my-2"></div>
 
@@ -74,7 +74,7 @@ const CompetitionCard = ({ competition, featured = false }) => {
               <span className="text-black font-bold text-[16px]">{competition.type} </span>
             </div>
             <div>
-              <span className="text-gray-500 font-medium">{competition.status}</span>
+              <span className="text-black font-medium text-[12px]">{competition.status}</span>
             </div>
           </div>
         )}

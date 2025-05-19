@@ -1,19 +1,3 @@
-// import { Link } from 'react-router-dom';
-
-// const Learn = () => {
-//   return (
-//     <div className="max-w-[1200px] mx-auto">
-//       <h1 className="text-3xl font-bold text-gray-900 mb-6">Learn</h1>
-//       <p className="text-gray-700">
-//         Develop your data science skills with free, interactive tutorials.
-//       </p>
-//     </div>
-//   );
-// };
-
-// export default Learn;
-
-
 // src/components/Learn.jsx
 import React, { useState, useLayoutEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -84,7 +68,7 @@ export default function Learn() {
               <p className="mt-4 text-lg text-gray-600">Gain the skills you need to do independent data science projects.</p>
             </div>
             <div className="flex justify-end">
-              <img src="/images/learnImage.svg" alt="Two people learning data science" className="max-w-full h-auto" />
+              <img src="/images/learnImage.svg" alt="Two people learning data science" className="max-w-full h-52" />
             </div>
           </section>
 

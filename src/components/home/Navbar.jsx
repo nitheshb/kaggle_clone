@@ -48,7 +48,7 @@ const Navbar = () => {
             <Link to="/models" className="text-gray-700 hover:text-gray-900">Models</Link>
             <Link to="/code" className="text-gray-700 hover:text-gray-900">Code</Link>
             <Link to="/discussions" className="text-gray-700 hover:text-gray-900">Discussions</Link>
-            <Link to="/courses" className="text-gray-700 hover:text-gray-900">Courses</Link>
+            <Link to="/learn" className="text-gray-700 hover:text-gray-900">Courses</Link>
             <button className="text-gray-700">...</button>
           </nav>
 
