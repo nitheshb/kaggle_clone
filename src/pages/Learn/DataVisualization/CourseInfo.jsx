@@ -50,7 +50,7 @@ const CourseInfo = () => {
 
       {/* Fixed Image vertically aligned with Alexis Cook text */}
       <img
-        src="https://your-image-url-here.jpg"
+        src='https://storage.googleapis.com/kaggle-avatars/thumbnails/2603295-kg.jpg'
         alt="Alexis Cook"
         className="w-6 h-6 rounded-full fixed right-4 object-cover z-50"
         style={{
