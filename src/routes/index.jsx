@@ -8,6 +8,7 @@ import Code from '../pages/Code';
 import Discussions from '../pages/Discussions';
 import Courses from '../pages/Courses';
 import Learn from '../pages/Learn/Learn';
+import CourseDetail from '../pages/Learn/CourseDetail.jsx';
 import NotFound from '../pages/NotFound';
 import ImageMatching from '../pages/ImageMatching';
 import AllCompetetions from '../pages/AllCompetetions';
@@ -25,6 +26,7 @@ const AppRoutes = () => {
       <Route path="/discussions" element={<Layout><Discussions /></Layout>} />
       <Route path="/courses" element={<Layout><Courses /></Layout>} />
       <Route path="/learn" element={<Layout><Learn /></Layout>} />
+      <Route path="/courses/:courseSlug" element={<CourseDetail />} />
       <Route path="/all-competetions" element={<Layout><AllCompetetions /></Layout>} />
       <Route path="/predict-calorie-expenditure" element={<Layout><PredictCaloriesExpenditure /></Layout>} />
       <Route path="/yale-unc-ch-geophysical-waveform-inversion" element={<Layout><YaleUNCCH /></Layout>} />

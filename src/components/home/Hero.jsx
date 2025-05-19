@@ -3,7 +3,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-16 bg-white">
+    <section className="pt-8 pb-16 bg-white">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
           <div>
@@ -36,7 +36,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex justify-center lg:justify-end">
-            <div className="w-full max-w-[500px] aspect-[4/3] bg-gray-50 rounded-lg overflow-hidden">
+            <div className="w-full max-w-[500px] aspect-[4/3] rounded-lg overflow-hidden">
               <img 
                 src="\images\hero-illo@3x.png" 
                 alt="Kaggle Community" 

@@ -57,7 +57,7 @@ const CompetitionsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-8 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">

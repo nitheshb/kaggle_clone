@@ -23,7 +23,7 @@ const KagglersSection = () => {
   });
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-8">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         <div className="bg-white rounded-lg border border-gray-100 p-8 shadow-sm relative overflow-hidden">
           {/* Decorative elements */}

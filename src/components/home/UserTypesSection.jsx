@@ -58,7 +58,7 @@ const UserTypesSection = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section className="py-12 bg-white border-t border-gray-100">
+    <section className="py-8 bg-white border-t border-gray-100">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold text-gray-800 mb-12">Who's on Kaggle?</h2>
 

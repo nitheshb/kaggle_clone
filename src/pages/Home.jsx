@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col ">
       <Navbar />
-      <main className="flex-grow pt-16">
+      <main className="flex-grow">
         <Hero />
         <UserTypesSection />
         <ProjectsSection />
@@ -31,8 +31,8 @@ const Home = () => {
         <CompetitionsSection />
         <SolutionWriteupsSection />
         <CoursesSection />
-        <KagglersSection />
         <CommunitySection />
+        <KagglersSection />
         <CommunityStatsSection />
       </main>
       <Footer />

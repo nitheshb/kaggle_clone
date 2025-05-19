@@ -26,7 +26,8 @@ const courses = [
   { title: 'Python', description: 'Learn the most important language for data science.', icon: '/images/python.svg', meta: '5 hours', builds: 'Intro to Programming' },
   { title: 'Intro to Machine Learning', description: 'Learn the core ideas in machine learning, and build your first models.', icon: '/images/intro-to-machine-learning.svg', meta: '3 hours', builds: 'Python' },
   { title: 'Pandas', description: 'Solve short hands-on challenges to perfect your data manipulation skills.', icon: '/images/pandas.svg', meta: '4 hours', builds: 'Python' },
-  { title: 'Intermediate Machine Learning', description: 'Handle missing values, non-numeric values, data leakage, and more.', icon: '/images/intermediate-machine-learning.svg', meta: '4 hours', builds: 'Python' },
+  { title: 'Intermediate Machine Learning', description: 'Handle missing values, non-numeric values, data leakage, and more.', 
+    icon: '/images/intermediate-machine-learning.svg', meta: '4 hours', builds: 'Python' },
   { title: 'Data Visualization', description: 'Make great data visualizations. A great way to see the power of coding!', icon: '/images/data-visualization.svg', meta: '4 hours', builds: 'Python' },
   { title: 'Feature Engineering', description: 'Better features make better models. Discover how to get the most out of your data.', icon: '/images/feature-engineering.svg', meta: '5 hours · 1 guided project', prereq: 'No prerequisites' },
   { title: 'Intro to SQL', description: 'Learn SQL for working with databases, using Google BigQuery.', icon: '/images/intro-to-sql.svg', meta: '3 hours', builds: 'Intro to Programming' },
@@ -78,18 +79,18 @@ export default function Learn() {
 
         <div className="flex-1 overflow-auto pb-8">
           {/* Hero */}
-          <section className="px-8 pt-4 pb-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <section className="px-8 pb-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 className="text-5xl font-bold">Learn</h1>
+              <h1 className="text-4xl font-bold">Learn</h1>
               <p className="mt-4 text-lg text-gray-600">Gain the skills you need to do independent data science projects.</p>
             </div>
             <div className="flex justify-end">
-              <img src="/images/learnImage.svg" alt="Two people learning data science" className="max-w-full h-auto" />
+              <img src="/images/learnImage.svg" alt="Two people learning data science" className="h-60 w-60" />
             </div>
           </section>
 
           {/* Courses Section */}
-          <section className="px-8 pt-0 pb-4 border-t">
+          <section className="px-8 pt-0 pb-4">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2">
                 <BarChart2 className="h-5 w-5 text-gray-700" />
@@ -124,7 +125,7 @@ export default function Learn() {
                 })}
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-20">
                 {courses.map(c => {
                   const slug = c.title.toLowerCase().replace(/\s+/g, '-');
                   return (
@@ -151,7 +152,7 @@ export default function Learn() {
           </section>
 
           {/* Guides Section */}
-          <section className="px-8 pt-0 pb-8 border-t">
+          <section className="px-8 pb-8 mb-12">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2">
                 <Bookmark className="h-5 w-5 text-gray-700" />

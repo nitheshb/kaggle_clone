@@ -52,7 +52,7 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-white border-t border-gray-100">
+    <section className="py-8 bg-white border-t border-gray-100">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>

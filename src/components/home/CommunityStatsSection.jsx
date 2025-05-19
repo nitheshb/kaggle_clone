@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const CommunityStatsSection = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-8 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Global community */}
