@@ -6,12 +6,15 @@ import Models from './Models';
 import Discussion from './Discussion';
 import Leaderboard from './Leaderboard';
 import Rules from './Rules';
+import CompetitionNavbarA from '../../layout/NavbarA'; // Import the CompetitionNavbarA component
 
 const CompetitionPage = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState('Data');
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [navbarVisible] = useState(true); // Add state for navbar visibility
+  
   
   // Handle scroll effect
   useEffect(() => {
@@ -40,6 +43,8 @@ const CompetitionPage = () => {
 
   const DatasetSidebar = () => {
     return (
+      <>
+      <CompetitionNavbarA visible={navbarVisible} />
       <div className={`${isMobile ? 'px-4 py-6 border-t border-gray-200' : 'pl-8'}`}>
         {/* Files section */}
         <div className="mb-6">
@@ -65,6 +70,7 @@ const CompetitionPage = () => {
           <p className="text-gray-700">Apache 2.0</p>
         </div>
       </div>
+      </>
     );
   };
   
@@ -269,6 +275,7 @@ const CompetitionPage = () => {
         </div>
       )}
     </div>
+    
   );
 };
 

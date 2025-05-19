@@ -282,7 +282,7 @@ function Leaderboard() {
                     <td className="px-4 py-3 text-sm text-right">{entry.last}</td>
                     <td className="px-4 py-3 text-sm text-right">
                       {entry.rank <= 3 ? null : (
-                        <button className="text-blue-600 hover:underline">Join</button>
+                        <button className="text-blue-600 hover:underline"></button>
                       )}
                     </td>
                   </tr>

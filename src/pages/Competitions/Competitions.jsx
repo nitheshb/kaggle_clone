@@ -78,7 +78,7 @@ const Competitions = () => {
       category: 'Featured • Code Competition',
       teams: 375,
       prize: '$725,000',
-      daysToGo: '6 months to go'
+      daysToGo: '6mo to go'
     },
     {
       id: 6,
@@ -89,7 +89,7 @@ const Competitions = () => {
       category: 'Featured • Code Competition',
       teams: 1342,
       prize: '$75,000',
-      daysToGo: '16 days to go'
+      daysToGo: '15d to go'
     },
     {
       id: 7,
@@ -100,7 +100,7 @@ const Competitions = () => {
       category: 'Research • Code Competition',
       teams: 954,
       prize: '$65,000',
-      daysToGo: '22 days to go'
+      daysToGo: '21d to go'
     },
     {
       id: 8,
@@ -111,7 +111,7 @@ const Competitions = () => {
       category: 'Research • Code Competition',
       teams: 1706,
       prize: '$50,000',
-      daysToGo: '23 days to go'
+      daysToGo: '22d to go'
     },
     {
     id: 9,
@@ -122,7 +122,7 @@ const Competitions = () => {
     category: 'Featured • Code Competition',
     teams: 1325,
     prize: '$50,000',
-    daysToGo: '13 days to go'
+    daysToGo: '13d to go'
   },
   {
     id: 10,
@@ -133,7 +133,7 @@ const Competitions = () => {
     category: 'Research • Code Competition',
     teams: 724,
     prize: '$50,000',
-    daysToGo: '19 days to go'
+    daysToGo: '17d to go'
   },
   {
     id: 11,
@@ -144,7 +144,7 @@ const Competitions = () => {
     category: 'Research',
     teams: 547,
     prize: '$50,000',
-    daysToGo: '2 months to go'
+    daysToGo: '1mo to go'
   },
   {
     id: 12,
@@ -155,7 +155,7 @@ const Competitions = () => {
     category: 'Playground',
     teams: 2300,
     prize: 'Swag',
-    daysToGo: '17 days to go'
+    daysToGo: '17d to go'
   },
   {
     id: 13,
@@ -166,7 +166,7 @@ const Competitions = () => {
     category: 'Featured • Code Competition',
     teams: 617,
     prize: '$1,225,000',
-    daysToGo: 'A month to go'
+    daysToGo: '1mo to go'
   },
   {
     id: 14,
@@ -177,7 +177,7 @@ const Competitions = () => {
     category: 'Featured • Code Competition',
     teams: 3757,
     prize: '$120,000',
-    daysToGo: '2 months to go'
+    daysToGo: '2mo to go'
   }
 
 
@@ -323,10 +323,24 @@ const Competitions = () => {
           <div className="flex flex-col w-full md:w-2/4">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Competitions</h1>
             <p className="text-gray-600 mb-6 text-[1.05rem] leading-6">
-              Grow your data science skills by competing in our exciting competitions. Find help in the 
-              <span onClick={() => navigate('/documentation')} className="text-black underline cursor-pointer"> documentation </span> 
-              or learn about <span onClick={() => navigate('/community-competitions')} className="text-black underline cursor-pointer">Community Competitions</span>. 
-            </p>
+  Grow your data science skills by competing in our exciting competitions. Find help in the{' '}
+  <span 
+    onClick={() => navigate('/documentation')} 
+    className="text-black cursor-pointer"
+    style={{ textDecorationLine: 'underline', textDecorationThickness: '0.5px', textUnderlineOffset: '4px' }}
+  >
+    documentation
+  </span>{' '}
+  or learn about{' '}
+  <span 
+    onClick={() => navigate('/community-competitions')} 
+    className="text-black cursor-pointer"
+    style={{ textDecorationLine: 'underline', textDecorationThickness: '0.5px', textUnderlineOffset: '4px' }}
+  >
+    Community Competitions
+  </span>.
+</p>
+
             <div className="mb-6">
               <span onClick={() => navigate('/host-competition')} 
                     className="inline-block bg-gray-900 text-white rounded-full px-6 py-2 text-sm font-bold hover:bg-gray-800 transition-colors cursor-pointer">
@@ -425,6 +439,8 @@ const Competitions = () => {
             ))}
           </div>
         </div>
+
+        <hr className="my-8 border-gray-300" />  
 
         {/* Featured Competitions Section */}
         <div className="mb-12">

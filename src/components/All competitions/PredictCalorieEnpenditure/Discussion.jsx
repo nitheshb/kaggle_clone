@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import { Search, ChevronUp, ChevronDown, MoreHorizontal, Bell, Filter } from 'lucide-react';
 
@@ -41,6 +43,30 @@ function Discussion() {
       votes: 10
     }
   ];
+
+  // Add state to track votes for each topic
+  const [topicVotes, setTopicVotes] = useState(
+    [...pinnedTopics, ...regularTopics].reduce((acc, topic) => {
+      acc[topic.id] = topic.votes;
+      return acc;
+    }, {})
+  );
+
+  // Function to handle upvote
+  const handleUpvote = (id) => {
+    setTopicVotes(prev => ({
+      ...prev,
+      [id]: prev[id] + 1
+    }));
+  };
+
+  // Function to handle downvote
+  const handleDownvote = (id) => {
+    setTopicVotes(prev => ({
+      ...prev,
+      [id]: prev[id] - 1
+    }));
+  };
 
   return (
     <div className="w-full">
@@ -118,14 +144,25 @@ function Discussion() {
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="flex items-center w-10 justify-center">
-                  <button className="p-1 text-gray-400 hover:text-gray-600">
-                    <ChevronUp size={12} />
-                  </button>
-                  <span className="mx-1 text-xs text-gray-700">{topic.votes}</span>
-                  <button className="p-1 text-gray-400 hover:text-gray-600">
-                    <ChevronDown size={12} />
-                  </button>
+                {/* Updated voting component with same style as DiscussionList.jsx */}
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center rounded-full border border-gray-200 overflow-hidden mb-1">
+                    <button 
+                      className="py-0.5 px-1.5  border-r border-gray-200 hover:bg-gray-200"
+                      onClick={() => handleUpvote(topic.id)}
+                    >
+                      <ChevronUp size={12} className="text-gray-500" />
+                    </button>
+                    <div className="py-0.5 px-2">
+                      <span className="font-medium text-xs text-gray-800">{topicVotes[topic.id]}</span>
+                    </div>
+                    <button 
+                      className="py-0.5 px-1.5 border-l border-gray-200 hover:bg-gray-200"
+                      onClick={() => handleDownvote(topic.id)}
+                    >
+                      <ChevronDown size={12} className="text-gray-500" />
+                    </button>
+                  </div>
                 </div>
                 
                 <div className="text-xs text-gray-500 w-16">
@@ -166,14 +203,25 @@ function Discussion() {
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="flex items-center w-10 justify-center">
-                  <button className="p-1 text-gray-400 hover:text-gray-600">
-                    <ChevronUp size={12} />
-                  </button>
-                  <span className="mx-1 text-xs text-gray-700">{topic.votes}</span>
-                  <button className="p-1 text-gray-400 hover:text-gray-600">
-                    <ChevronDown size={12} />
-                  </button>
+                {/* Updated voting component with same style as DiscussionList.jsx */}
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center rounded-full border border-gray-200 overflow-hidden mb-1">
+                    <button 
+                      className="py-0.5 px-1.5  border-r border-gray-200 hover:bg-gray-200"
+                      onClick={() => handleUpvote(topic.id)}
+                    >
+                      <ChevronUp size={12} className="text-gray-500" />
+                    </button>
+                    <div className="py-0.5 px-2">
+                      <span className="font-medium text-xs text-gray-800">{topicVotes[topic.id]}</span>
+                    </div>
+                    <button 
+                      className="py-0.5 px-1.5  border-l border-gray-200 hover:bg-gray-200"
+                      onClick={() => handleDownvote(topic.id)}
+                    >
+                      <ChevronDown size={12} className="text-gray-500" />
+                    </button>
+                  </div>
                 </div>
                 
                 <div className="text-xs text-gray-500 w-16">
