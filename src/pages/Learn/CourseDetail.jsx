@@ -7,7 +7,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useSidebar } from '../../contexts/SidebarContext.jsx';
 import Sidebar from '../../components/layout/Sidebar.jsx';
 import NotFound from '../NotFound.jsx';
-import { Menu, Search } from 'lucide-react';
+import { Menu, Search,
+  Bell,
+  Plus,
+  ListFilter, BookOpen, Code } from 'lucide-react';
 
 // Course metadata
 const courses = [
@@ -136,8 +139,8 @@ export default function CourseDetail() {
                           <h3 className="font-medium">{l.title}</h3>
                           <p className="text-sm text-gray-600">{l.desc}</p>
                         </div>
-                        <div className="w-2/12 text-center">📖</div>
-                        <div className="w-2/12 text-center">💻</div>
+                        <div className="w-2/12 text-center"> <BookOpen className="h-4 w-4 mx-auto" /></div>
+                        <div className="w-2/12 text-center"><Code className="h-4 w-4 mx-auto" /></div>
                       </li>
                     ))}
                   </ul>
@@ -173,7 +176,32 @@ export default function CourseDetail() {
               <div className="md:flex gap-8">
                 {/* Discussions */}
                 <div className="md:w-full">
-                  <h2 className="text-2xl font-semibold mb-4">Discussion</h2>
+                  <div className="flex justify-between">
+                    <h2 className="text-2xl font-semibold mb-4">Discussion</h2>
+                  <div className="flex gap-4">
+                    <button className="px-6 text-gray-600 hover:bg-gray-50 border border-gray-300 rounded-full font-medium flex items-center gap-2">
+                      <Bell className="w-4 h-4" />
+                      Follow
+                    </button>
+                    <button className="px-6 bg-white hover:bg-gray-50 text-gray-600 border border-gray-300 rounded-full font-medium flex items-center gap-2">
+                      <Plus className="w-4 h-4" />
+                      New Topic
+                    </button>
+                  </div>
+                  </div>
+
+      <div className="relative my-6 px-6">
+        <input
+          type="text"
+          placeholder="Search discussions"
+          className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-500"
+        />
+        <Search className="absolute left-10 top-1/2 transform -translate-y-1/2 text-gray-900 w-5 h-5" />
+        <button className="absolute right-10 top-1/2 transform -translate-y-1/2 flex items-center gap-1 text-gray-700">
+          <ListFilter className="w-4 h-4" />
+          <span className="text-sm font-bold">Filters</span>
+        </button>
+      </div>
                   {/* Pinned */}
                   {pinnedTopics.length > 0 && (
                     <div className="mb-6">
