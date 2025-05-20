@@ -26,6 +26,7 @@ import DocumentationPage from '../pages/Documentation';
 import SupportContact from '../pages/SupportContact'; // ✅ Add this
 import KaggleCommunityGuidelines from '../pages/CommunityGuidelines.jsx';
 import CommunityGuidelines from '../pages/CommunityGuidelines.jsx';
+import Progression from '../pages/Progression.jsx';
 
 // Inside <Routes>:
 
@@ -66,6 +67,7 @@ const AppRoutes = () => {
       <Route path="*" element={<Layout><NotFound /></Layout>} />
       <Route path="/signin" element={<AuthPage />} />
       <Route path="/register" element={<AuthPage />} />
+      <Route path="/progression" element={<Layout><Progression /></Layout>} />
 
       <Route path="/competitions/image-matching-challenge-2025" element={<Layout><ImageMatching /></Layout>} />
     </Routes>
