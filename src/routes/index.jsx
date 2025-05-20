@@ -27,7 +27,8 @@ import SupportContact from '../pages/SupportContact'; // ✅ Add this
 import KaggleCommunityGuidelines from '../pages/CommunityGuidelines.jsx';
 import CommunityGuidelines from '../pages/CommunityGuidelines.jsx';
 import Progression from '../pages/Progression.jsx';
-
+import Privacy from '../pages/Privacy.jsx';
+import EducatorResources from '../pages/EducatorResources.jsx';
 // Inside <Routes>:
 
 
@@ -62,6 +63,8 @@ const AppRoutes = () => {
       <Route path="/competitions/predict-podcast-listening-time" element={<Layout><Podcast /></Layout>} />
       <Route path="/host-competition" element={<Layout><CompetitionHost /></Layout>} />
       <Route path="/Terms" element={<Layout><Terms /></Layout>} />
+      <Route path="/educator-resources" element={<Layout><EducatorResources /></Layout>} />
+      <Route path="/privacy" element={<Layout><Privacy /></Layout>} />
       <Route path="/support/contact" element={<Layout><SupportContact /></Layout>} />
       <Route path="/community-guidelines" element={<Layout><CommunityGuidelines /></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />
