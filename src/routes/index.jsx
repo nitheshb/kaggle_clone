@@ -26,7 +26,15 @@ import DocumentationPage from '../pages/Documentation';
 import SupportContact from '../pages/SupportContact'; // ✅ Add this
 import KaggleCommunityGuidelines from '../pages/CommunityGuidelines.jsx';
 import CommunityGuidelines from '../pages/CommunityGuidelines.jsx';
-
+import Progression from '../pages/Progression.jsx';
+import Privacy from '../pages/Privacy.jsx';
+import EducatorResources from '../pages/EducatorResources.jsx';
+import PublicAPI from '../pages/PublicApi';
+import EfficientGPUUsage from '../pages/EfficientGPUUsage';
+import OrganizationsPage from '../pages/Organizations.jsx';
+import NotebooksPage from '../pages/NoteBooks.jsx';
+import TeamPage from '../pages/Team.jsx';
+import ModelsPage from '../pages/ModelsPage.jsx';
 // Inside <Routes>:
 
 
