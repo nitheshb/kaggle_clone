@@ -37,7 +37,7 @@ const Sidebar = () => {
     'User Rankings',
     'Documentation',
     'Progression',
-    'Host a Competition',
+    'host-competition',
     'Educator Resources',
     'Support/Contact',
     'Community Guidelines',

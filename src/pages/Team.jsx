@@ -1,10 +1,16 @@
-function Team() {
+
+import React from 'react';
+
+import CompetitionNavbarA from '../components/layout/NavbarA'; 
+import KaggleTeamPage from '../components/Team/Team';
+
+export default function TeamPage() {
   return (
-    <div className="p-6">
-      <h1 className="text-4xl font-bold">Team</h1>
-      <p className="mt-4">This is the Team page.</p>
+    <div className="min-h-screen">
+        <CompetitionNavbarA visible={true} />
+    <main className="pt-20 px-6 pb-10">
+      <KaggleTeamPage />
+      </main>
     </div>
   );
 }
-
-export default Team;

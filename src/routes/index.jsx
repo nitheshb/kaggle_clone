@@ -3,7 +3,7 @@ import Layout from '../components/layout/Layout';
 import Home from '../pages/Home';
 import Competitions from '../pages/Competitions/Competitions';
 import Datasets from '../pages/Datasets';
-import Models from '../pages/ModelsPage.jsx';
+import Models from '../pages/Models';
 import Code from '../pages/Code';
 import Discussions from '../pages/Discussions';
 import Courses from '../pages/Courses';
@@ -26,7 +26,6 @@ import DocumentationPage from '../pages/Documentation';
 import SupportContact from '../pages/SupportContact'; // ✅ Add this
 import KaggleCommunityGuidelines from '../pages/CommunityGuidelines.jsx';
 import CommunityGuidelines from '../pages/CommunityGuidelines.jsx';
-import ModelsPage from '../pages/ModelsPage.jsx';
 
 // Inside <Routes>:
 
@@ -51,6 +50,12 @@ const AppRoutes = () => {
       {/* <Route path="/courses" element={<Layout><Courses /></Layout>} /> */}
      <Route path="/user-rankings" element={<Layout><UserRankings /></Layout>} />
      <Route path="/Documentation" element={<Layout><DocumentationPage/></Layout>} />
+     <Route path="/public-api" element={<Layout><PublicAPI /></Layout>} />
+      <Route path="/efficient-gpu-usage" element={<Layout><EfficientGPUUsage /></Layout>} />
+      <Route path="/organizations" element={<Layout><OrganizationsPage /></Layout>} />
+       <Route path="/Notebooks" element={<Layout><NotebooksPage /></Layout>} />
+       <Route path="/Team" element={<Layout><TeamPage /></Layout>} />
+     
       <Route path="/courses" element={<Layout><Courses /></Layout>} />
       <Route path="/learn" element={<Layout><Learn /></Layout>} />
       <Route path="/courses/:courseSlug" element={<CourseDetail />} />
@@ -63,11 +68,14 @@ const AppRoutes = () => {
       <Route path="/competitions/predict-podcast-listening-time" element={<Layout><Podcast /></Layout>} />
       <Route path="/host-competition" element={<Layout><CompetitionHost /></Layout>} />
       <Route path="/Terms" element={<Layout><Terms /></Layout>} />
+      <Route path="/educator-resources" element={<Layout><EducatorResources /></Layout>} />
+      <Route path="/privacy" element={<Layout><Privacy /></Layout>} />
       <Route path="/support/contact" element={<Layout><SupportContact /></Layout>} />
       <Route path="/community-guidelines" element={<Layout><CommunityGuidelines /></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />
       <Route path="/signin" element={<AuthPage />} />
       <Route path="/register" element={<AuthPage />} />
+      <Route path="/progression" element={<Layout><Progression /></Layout>} />
 
       <Route path="/competitions/image-matching-challenge-2025" element={<Layout><ImageMatching /></Layout>} />
     </Routes>
