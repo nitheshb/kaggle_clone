@@ -3,7 +3,7 @@ import Layout from '../components/layout/Layout';
 import Home from '../pages/Home';
 import Competitions from '../pages/Competitions/Competitions';
 import Datasets from '../pages/Datasets';
-import Models from '../pages/Models';
+import Models from '../pages/ModelsPage.jsx';
 import Code from '../pages/Code';
 import Discussions from '../pages/Discussions';
 import Courses from '../pages/Courses';
@@ -26,6 +26,7 @@ import DocumentationPage from '../pages/Documentation';
 import SupportContact from '../pages/SupportContact'; // ✅ Add this
 import KaggleCommunityGuidelines from '../pages/CommunityGuidelines.jsx';
 import CommunityGuidelines from '../pages/CommunityGuidelines.jsx';
+import ModelsPage from '../pages/ModelsPage.jsx';
 
 // Inside <Routes>:
 
@@ -37,6 +38,7 @@ const AppRoutes = () => {
       <Route path="/competitions" element={<Layout><Competitions /></Layout>} />
       <Route path="/datasets" element={<Layout><Datasets /></Layout>} />
       <Route path="/models" element={<Layout><Models /></Layout>} />
+      <Route path="/models-new" element={<Layout><ModelsPage /></Layout>} />
       <Route path="/code" element={<Layout><Code /></Layout>} />
       <Route path="/discussions" element={<Layout><Discussions /></Layout>} />
 
