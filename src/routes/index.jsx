@@ -29,6 +29,11 @@ import CommunityGuidelines from '../pages/CommunityGuidelines.jsx';
 import Progression from '../pages/Progression.jsx';
 import Privacy from '../pages/Privacy.jsx';
 import EducatorResources from '../pages/EducatorResources.jsx';
+import PublicAPI from '../pages/PublicApi';
+import EfficientGPUUsage from '../pages/EfficientGPUUsage';
+import OrganizationsPage from '../pages/Organizations.jsx';
+import NotebooksPage from '../pages/NoteBooks.jsx';
+import TeamPage from '../pages/Team.jsx';
 // Inside <Routes>:
 
 
@@ -51,6 +56,12 @@ const AppRoutes = () => {
       {/* <Route path="/courses" element={<Layout><Courses /></Layout>} /> */}
      <Route path="/user-rankings" element={<Layout><UserRankings /></Layout>} />
      <Route path="/Documentation" element={<Layout><DocumentationPage/></Layout>} />
+     <Route path="/public-api" element={<Layout><PublicAPI /></Layout>} />
+      <Route path="/efficient-gpu-usage" element={<Layout><EfficientGPUUsage /></Layout>} />
+      <Route path="/organizations" element={<Layout><OrganizationsPage /></Layout>} />
+       <Route path="/Notebooks" element={<Layout><NotebooksPage /></Layout>} />
+       <Route path="/Team" element={<Layout><TeamPage /></Layout>} />
+     
       <Route path="/courses" element={<Layout><Courses /></Layout>} />
       <Route path="/learn" element={<Layout><Learn /></Layout>} />
       <Route path="/courses/:courseSlug" element={<CourseDetail />} />

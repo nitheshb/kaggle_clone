@@ -9,12 +9,15 @@
 
 import React from 'react';
 import UserRankings from "../components/UserRankings/UserRankings";
-
+import CompetitionNavbarA from '../components/layout/NavbarA'; 
 
 export default function UserRankingsPage() {
   return (
-    <div className="min-h-screen bg-white-100 px-6 py-8">
+    <div className="min-h-screen">
+        <CompetitionNavbarA visible={true} />
+    <main className="pt-20 px-6 pb-10">
       <UserRankings />
+      </main>
     </div>
   );
 }
