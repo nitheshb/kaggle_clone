@@ -3,8 +3,8 @@ import Layout from '../components/layout/Layout';
 import Home from '../pages/Home';
 import Competitions from '../pages/Competitions/Competitions';
 import Datasets from '../pages/Datasets';
-import Models from '../pages/Models';
-import Code from '../pages/Code';
+// import Models from '../pages/Models';
+// import Code from '../pages/Code';
 import Discussions from '../pages/Discussions';
 import Courses from '../pages/Courses';
 import Learn from '../pages/Learn/Learn';
@@ -34,7 +34,7 @@ import EfficientGPUUsage from '../pages/EfficientGPUUsage';
 import OrganizationsPage from '../pages/Organizations.jsx';
 import NotebooksPage from '../pages/NoteBooks.jsx';
 import TeamPage from '../pages/Team.jsx';
-import ModelsPage from '../pages/ModelsPage.jsx';
+import Models from '../pages/ModelsPage.jsx';
 // Inside <Routes>:
 
 
@@ -44,9 +44,9 @@ const AppRoutes = () => {
       <Route path="/" element={<Layout><Home /></Layout>} />
       <Route path="/competitions" element={<Layout><Competitions /></Layout>} />
       <Route path="/datasets" element={<Layout><Datasets /></Layout>} />
-      <Route path="/models" element={<Layout><Models /></Layout>} />
-      <Route path="/models-new" element={<Layout><ModelsPage /></Layout>} />
-      <Route path="/code" element={<Layout><Code /></Layout>} />
+      {/* <Route path="/models" element={<Layout><Models /></Layout>} /> */}
+      <Route path="/Models" element={<Layout><Models /></Layout>} />
+      {/* <Route path="/code" element={<Layout><Code /></Layout>} /> */}
       <Route path="/discussions" element={<Layout><Discussions /></Layout>} />
 
       {/* ✅ Restored missing general forum routes */}
