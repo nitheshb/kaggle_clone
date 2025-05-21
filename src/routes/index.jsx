@@ -4,7 +4,7 @@ import Home from '../pages/Home';
 import Competitions from '../pages/Competitions/Competitions';
 import Datasets from '../pages/Datasets';
 import Models from '../pages/Models';
-import Code from '../pages/Code';
+import Code from '../pages/Code/Code.jsx';
 import Discussions from '../pages/Discussions';
 import Courses from '../pages/Courses';
 import Learn from '../pages/Learn/Learn';
