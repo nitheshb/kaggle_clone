@@ -35,6 +35,7 @@ import OrganizationsPage from '../pages/Organizations.jsx';
 import NotebooksPage from '../pages/NoteBooks.jsx';
 import TeamPage from '../pages/Team.jsx';
 import Models from '../pages/ModelsPage.jsx';
+import Blog from '../pages/Blog.jsx';
 // Inside <Routes>:
 
 
@@ -84,6 +85,7 @@ const AppRoutes = () => {
       <Route path="/signin" element={<AuthPage />} />
       <Route path="/register" element={<AuthPage />} />
       <Route path="/progression" element={<Layout><Progression /></Layout>} />
+      <Route path="/Blog" element={<Layout><Blog /></Layout>} />
 
       <Route path="/competitions/image-matching-challenge-2025" element={<Layout><ImageMatching /></Layout>} />
     </Routes>

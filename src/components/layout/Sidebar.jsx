@@ -36,6 +36,7 @@ const Sidebar = () => {
   const moreItems = [
     'User Rankings',
     'Documentation',
+    'Blog',
     'Progression',
     'host-competition',
     'Educator Resources',
